@@ -8,6 +8,7 @@ import Gmaps from "../components/Gmaps";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Article from "../components/Article";
+import Umkm from "../components/Umkm";
 
 const Home = () => {
   useEffect(() => {
@@ -30,6 +31,7 @@ const Home = () => {
       <Portfolio />
       <Gmaps />
       <Article />
+      <Umkm />
       <Contact />
       <Footer />
     </div>

@@ -5,12 +5,12 @@ import WA from "../assets/images/wa.png";
 
 const Article = () => {
   return (
-    <section className={`page-section ${styles.article}`}>
+    <section className={`my-5 ${styles.article}`}>
       <h1 className="text-center">Berita Desa</h1>
       <hr className={styles["divider-custom"]} />
 
       <div className="container">
-        <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
           <div className="col">
             <div className="card h-100">
               <img src={ArticleImage} className="card-img-top" alt="..." />
@@ -144,7 +144,7 @@ const Article = () => {
             </div>
           </div>
         </div>
-        <div class="d-flex justify-content-center">
+        <div className="d-flex justify-content-center">
           <button className={`btn ${styles["btn-more"]} mt-5`}>
             Berita Lainnya &nbsp;<span className="fa-solid fa-arrow-right"></span>
           </button>

@@ -2,7 +2,7 @@ import styles from "../assets/css/SideMaps.module.css";
 
 const SideMap = () => {
   return (
-    <div className="col-md-4">
+    <div className="col-lg-4">
       <div className={`mb-5 ${styles.peta}`}>
         <h5 className="my-3">Peta Desa</h5>
         <iframe

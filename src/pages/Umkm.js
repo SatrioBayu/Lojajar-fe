@@ -11,8 +11,8 @@ const Umkm = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">UMKM Desa</h3>
         <p className="text-center mb-5">Usaha Mikro Kecil Menengah yang ada di Desa Lojajar</p>
-        <div className="row my-5">
-          <div className="col-md-8">
+        <div className="row g-3 my-5">
+          <div className="col-lg-8">
             <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
               <SideCard />
               <SideCard />

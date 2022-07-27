@@ -1,0 +1,29 @@
+.content {
+    margin-top: 7rem;
+    font-family: Open Sans, sans-serif;
+}
+
+.content p {
+    margin-bottom: 0;
+}
+
+.secondary{
+    color: #5D646D;
+}
+.image{
+    width: 100%;
+    border-radius: 10px;
+}
+.share{
+    width: 1.5rem;
+    height: 1.5rem;
+}
+.card-tag {
+    border-radius: 3rem;
+    /* background-color: #5EAD2B; */
+    border: 1px solid #D1D1D1;
+    text-decoration: none;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+}

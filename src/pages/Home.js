@@ -13,7 +13,7 @@ import Umkm from "../components/Umkm";
 const Home = () => {
   useEffect(() => {
     const script = document.createElement("script");
-    script.src = "./js/scripts.js";
+    script.src = "/js/scripts.js";
     script.defer = true;
 
     document.body.appendChild(script);

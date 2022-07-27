@@ -1,0 +1,23 @@
+.contact{
+    font-family: Open Sans;
+}
+hr.divider-custom {
+    height: 0.4rem;
+    max-width: 3.25rem;
+    margin: 1.5rem auto;
+    background-color: #1C8FB9;
+}
+.container-surat{
+    background-color: #F3F9FB;
+    padding: 5rem;
+}
+.container-surat p {
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    color: #5D646D;
+}
+.btn-more {
+    background: #1C8FB9;
+    border-radius: 8px;
+    color: #fff;
+}

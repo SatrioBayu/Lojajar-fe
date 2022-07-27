@@ -1,21 +1,20 @@
+import styles from "../assets/css/Contact.module.css";
+
 const Contact = () => {
   return (
-    <section className="page-section" id="contact">
-      <div className="container px-4 px-lg-5">
-        <iframe
-          src="https://docs.google.com/forms/d/e/1FAIpQLSdMwp5mE36Mon6u2DofTvt4tXd22M3o5EN5sgKtB_NzTRs9qQ/viewform?embedded=true"
-          width="80%"
-          height="1091"
-          frameBorder="0"
-          marginHeight="0"
-          marginWidth="0"
-        >
-          Memuat…
-        </iframe>
-        <div className="row gx-4 gx-lg-5 justify-content-center">
-          <div className="col-lg-4 text-center mb-5 mb-lg-0">
-            <i className="bi-phone fs-2 mb-3 text-muted"></i>
-            <div>+628 8288282828</div>
+    <section className={`container my-5 ${styles.contact}`} id="contact">
+      <h1 className="text-center">Permohonan Surat Online</h1>
+      <hr className={styles["divider-custom"]} />
+
+      <div className={`${styles["container-surat"]}`}>
+        <div className="row">
+          <div className="col-md-6">
+            <h3>Butuh Surat Administrasi?</h3>
+            <p>Lakukan pengajuan surat administrasi secara online tanpa perlu datang ke Kantor Desa</p>
+          </div>
+          <div className="col-md-2"></div>
+          <div className="col-md-4 py-3">
+            <button className={`btn ${styles["btn-more"]}`}>Ajukan Surat Online</button>
           </div>
         </div>
       </div>

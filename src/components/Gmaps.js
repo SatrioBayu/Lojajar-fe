@@ -1,7 +1,7 @@
 const Gmaps = () => {
   return (
     <section className="page-section bg-primary" id="peta">
-      <h2 className="dataDesa">Data Desa</h2>
+      <h2 className="dataDesa">Peta Desa</h2>
       <hr className="divider" />
       <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: "500px" }}>
         <iframe

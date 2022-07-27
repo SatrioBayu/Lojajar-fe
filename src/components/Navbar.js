@@ -1,7 +1,11 @@
+import LogoDesa from "../assets/images/image_14.png";
+import styles from "../assets/css/Navbar.module.css";
+
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
       <div className="container px-4 px-lg-5">
+        <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
         <a className="navbar-brand" href="#page-top">
           E-LOJAJAR
         </a>
@@ -19,23 +23,18 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto my-2 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#about">
-                Profil Desa
+              <a className="nav-link" href="#">
+                Home
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#services">
-                Pemerintahan Desa
+              <a className="nav-link" href="#article">
+                Berita
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#portfolio">
-                Beauty Lojajar
-              </a>
-            </li>
-            <li className="nav-item">
-              <a className="nav-link" href="#peta">
-                Peta
+              <a className="nav-link" href="#umkm">
+                UMKM
               </a>
             </li>
             <li className="nav-item">

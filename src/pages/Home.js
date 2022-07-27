@@ -7,6 +7,7 @@ import Portfolio from "../components/Portfolio";
 import Gmaps from "../components/Gmaps";
 import Contact from "../components/Contact";
 import Footer from "../components/Footer";
+import Article from "../components/Article";
 
 const Home = () => {
   useEffect(() => {
@@ -15,9 +16,6 @@ const Home = () => {
     script.defer = true;
 
     document.body.appendChild(script);
-    script.onload = () => {
-      console.log("script loaded");
-    };
     return () => {
       document.body.removeChild(script);
     };
@@ -31,6 +29,7 @@ const Home = () => {
       <Services />
       <Portfolio />
       <Gmaps />
+      <Article />
       <Contact />
       <Footer />
     </div>

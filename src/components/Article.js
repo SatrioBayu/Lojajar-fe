@@ -25,7 +25,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya
@@ -47,7 +47,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya
@@ -69,7 +69,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya
@@ -91,7 +91,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya
@@ -113,7 +113,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya
@@ -135,7 +135,7 @@ const Article = () => {
                   </div>
                 </div>
                 <hr />
-                <h5 className={`${styles["card-title"]}`}>Card title</h5>
+                <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
                 <a className={`${styles["card-link"]}`} href="">
                   Baca Selengkapnya

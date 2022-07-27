@@ -1,0 +1,23 @@
+.peta {
+    border: 1px solid black;
+    border-radius: 0.85rem;
+    padding: 1rem;
+}
+
+.contact-us {
+    border: 1px solid black;
+    border-radius: 0.85rem;
+    padding: 1rem;
+}
+
+.contact-us p {
+    color: #5D646D;
+}
+
+.footer-link {
+    font-family: Open Sans, sans-serif;
+    font-weight: 400;
+    color: black;
+    text-decoration: none;
+    display: block;
+}

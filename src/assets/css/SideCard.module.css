@@ -1,42 +1,28 @@
-.bg{
-    background-color: #F3F9FB;
-    min-height: 30em;
-}
-.content{
-    margin-top: 7rem;
-}
-.content{
-    font-family: Open Sans, sans-serif;
-}
-hr.divider-custom {
-    height: 0.4rem;
-    max-width: 3.25rem;
-    margin: 1.5rem auto;
-    background-color: #1C8FB9;
-}
-.swiper-pagination{
-    position: relative !important;
-}
-/* .card-icon{
+.card-icon {
     width: 1.2rem;
     height: 1.2rem;
 }
-.badge{
+
+.badge {
     border: 0px !important;
 }
-.card-tag{
+
+.card-tag {
     border-radius: 3rem;
     background-color: #5EAD2B;
 }
-.content p{
+
+.content p {
     margin-bottom: 0;
 }
+
 .btn-more {
     background: #1C8FB9;
     border-radius: 8px;
     padding: 1rem;
     color: #fff;
 }
+
 .card-title {
     font-weight: 400;
     font-family: Open Sans, sans-serif;
@@ -50,4 +36,4 @@ hr.divider-custom {
 
 .card-link {
     color: #1C8FB9;
-} */
+}

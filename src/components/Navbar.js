@@ -6,7 +6,7 @@ const Navbar = () => {
     <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
       <div className="container px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
-        <a className="navbar-brand" href="#page-top">
+        <a className="navbar-brand" href="/">
           E-LOJAJAR
         </a>
         <button
@@ -23,7 +23,7 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto my-2 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="#">
+              <a className="nav-link" href="/">
                 Home
               </a>
             </li>
@@ -33,7 +33,7 @@ const Navbar = () => {
               </a>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#umkm">
+              <a className="nav-link" href="/umkm">
                 UMKM
               </a>
             </li>

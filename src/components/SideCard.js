@@ -18,7 +18,6 @@ const SideCard = () => {
               <img src={WA} className={`${styles["card-icon"]}`} alt="wa" />
             </div>
           </div>
-          <hr />
           <h5 className={`fw-bold ${styles["card-title"]}`}>Warung Sawah Desa</h5>
           <p className={`${styles["card-text"]} mb-3`}>Ds. Krajan RT. 05 RW 01</p>
           <h5 className={`fw-bold ${styles["card-title"]}`}>Rp.10.000 - 25.000</h5>

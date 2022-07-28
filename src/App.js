@@ -9,6 +9,7 @@ import DetailUmkm from "./pages/DetailUmkm";
 import Surat from "./pages/Surat";
 import Protected from "./components/Protected";
 import Dashboard from "./pages/Dashboard";
+import TambahBerita from "./pages/TambahBerita";
 
 function App() {
   return (
@@ -32,6 +33,7 @@ function App() {
             // </Protected>
           }
         />
+        <Route path="/tambahberita" element={<TambahBerita />} />
       </Routes>
     </BrowserRouter>
   );

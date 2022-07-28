@@ -1,5 +1,7 @@
 .main{
-    background-color: rgba(1, 0, 57, 0.04);;
+    background-color: rgba(1, 0, 57, 0.04);
+    position: relative;
+    display: none;
 }
 .main a:hover{
     color: #1C8FB9;
@@ -12,4 +14,9 @@
 }
 .dropdown:hover{
     background-color: #D8EAA8 !important;
+}
+@media (min-width: 576px) {
+    .main{
+        display: flex;
+    }
 }

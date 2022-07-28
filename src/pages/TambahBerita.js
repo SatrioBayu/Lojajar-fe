@@ -1,8 +1,23 @@
 import AdminNavbar from "../components/AdminNavbar";
 import styles from "../assets/css/TambahBerita.module.css";
 import Sidebar from "../components/Sidebar";
+import { useState } from "react";
 
 const TambahBerita = () => {
+  const [image, setImage] = useState(null);
+  const [imagePreview, setImagePreview] = useState(null);
+  const [judul, setJudul] = useState("");
+  const [isi, setIsi] = useState("");
+
+  const handleUploadImage = (e) => {
+    setImage(e.target.files[0]);
+    setImagePreview(URL.createObjectURL(e.target.files[0]));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <div>
       <AdminNavbar />
@@ -13,18 +28,19 @@ const TambahBerita = () => {
             <h3>Tambah Berita</h3>
             <p>Anda dapat menambah berita terkini</p>
 
-            <form className={`${styles.form}`}>
-              <div className="mb-3">
+            <form onSubmit={handleSubmit} className={`${styles.form}`}>
+              <div className="mb-4">
                 <h5>Gambar Berita</h5>
-                <input required className="form-control" type="file" />
+                {imagePreview && <img src={imagePreview} className={`img-thumbnail ${styles.preview}`} alt="thumbnail" />}
+                <input onChange={handleUploadImage} required className="form-control mt-2" type="file" />
               </div>
-              <div className="mb-3">
+              <div className="mb-4">
                 <h5>Judul Berita</h5>
-                <input required className="form-control" type="text" />
+                <input required onChange={(e) => setJudul(e.target.value)} className="form-control" type="text" />
               </div>
-              <div className="mb-3">
+              <div className="mb-4">
                 <h5>Isi Berita</h5>
-                <textarea required class="form-control p-3" rows="10" placeholder="Tuliskan sesuatu disini" id="floatingTextarea"></textarea>
+                <textarea required onChange={(e) => setIsi(e.target.value)} class="form-control p-3" rows="10" placeholder="Tuliskan sesuatu disini" id="floatingTextarea"></textarea>
               </div>
               <div class="d-flex">
                 <button type="submit" className="me-3 btn btn-primary">

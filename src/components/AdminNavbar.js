@@ -1,25 +1,17 @@
 import { NavLink } from "react-router-dom";
 import LogoDesa from "../assets/images/Lambang_Bondowoso.png";
-import Logo from "../assets/images/Logo.png";
 import styles from "../assets/css/Navbar.module.css";
+import OffCanvas from "./OffCanvas";
 
 const AdminNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-lg navbar-light py-3" id="mainNav">
+    <nav className="navbar navbar-expand-sm navbar-light py-3" id="mainNav">
       <div className="container-fluid px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
         <NavLink className="navbar-brand" to="/">
           E-LOJAJAR
         </NavLink>
-        <button
-          className="navbar-toggler navbar-toggler-right"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarResponsive"
-          aria-controls="navbarResponsive"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+        <button className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           <span className="navbar-toggler-icon"></span>
         </button>
         <div className="collapse navbar-collapse" id="navbarResponsive">
@@ -35,6 +27,7 @@ const AdminNavbar = () => {
           </ul>
         </div>
       </div>
+      <OffCanvas />
     </nav>
   );
 };

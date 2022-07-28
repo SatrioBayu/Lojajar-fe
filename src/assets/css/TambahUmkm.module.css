@@ -11,10 +11,16 @@
     display: flex;
     height: 100%;
     min-height: 100vh;
+    width: 100%;
 }
 
 .form {
     background-color: #fff;
     height: 100%;
     padding: 2rem;
+}
+
+.preview{
+    height: 10rem;
+    object-fit: cover;
 }

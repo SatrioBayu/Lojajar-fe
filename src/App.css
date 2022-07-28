@@ -5,3 +5,11 @@
 .swiper-pagination-bullet-active{
   background-color: #1C8FB9 !important;
 }
+.offcanvas{
+  width: 15rem !important;
+}
+@media (min-width: 576px) {
+  .offcanvas{
+    display: none !important;
+  }
+}

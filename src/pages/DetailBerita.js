@@ -30,8 +30,12 @@ const DetailBerita = () => {
                 <p className={`mt-1 mb-3`}>Penulis : Dwiky Juprihantoro</p>
               </div>
               <div className="col-sm-6 d-flex justify-content-end">
-                <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
-                <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
+                <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsecondhand-seven.vercel.app/" target="_blank">
+                  <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
+                </a>
+                <a href="https://api.whatsapp.com/send/?phone&text=Coba sajo hehe" target="_blank">
+                  <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
+                </a>
                 <a onClick={copyLink} className={`badge ${styles["card-tag"]}`}>
                   {isCopied ? "Link Tersalin" : "Salin Link"}
                 </a>

@@ -13,9 +13,9 @@ const Berita = () => {
         <p className="text-center mb-5">Berita terkini seputar kejadian dan kegiatan di Desa Lojajar</p>
         <div className="row my-5">
           <div className="col-lg-8">
-            <HorizontalCard />
-            <HorizontalCard />
-            <HorizontalCard />
+            <HorizontalCard id="1" />
+            <HorizontalCard id="2" />
+            <HorizontalCard id="3" />
           </div>
           <SideMap />
         </div>

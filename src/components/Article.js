@@ -27,7 +27,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/1">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -49,7 +49,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/2">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -71,7 +71,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/3">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -93,7 +93,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/4">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -115,7 +115,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/5">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -137,7 +137,7 @@ const Article = () => {
                 <hr />
                 <h5 className={`${styles["card-title"]}`}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h5>
                 <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                <a className={`${styles["card-link"]}`} href="">
+                <a className={`${styles["card-link"]}`} href="/berita/6">
                   Baca Selengkapnya
                 </a>
               </div>
@@ -145,9 +145,9 @@ const Article = () => {
           </div>
         </div>
         <div className="d-flex justify-content-center">
-          <button className={`btn ${styles["btn-more"]} mt-5`}>
+          <a href="/berita" className={`btn ${styles["btn-more"]} mt-5`}>
             Berita Lainnya &nbsp;<span className="fa-solid fa-arrow-right"></span>
-          </button>
+          </a>
         </div>
       </div>
     </section>

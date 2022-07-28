@@ -1,7 +1,7 @@
 import ArticleImage from "../assets/images/Rectangle 160.png";
 import styles from "../assets/css/HorizontalCard.module.css";
 
-const HorizontalCard = () => {
+const HorizontalCard = (props) => {
   return (
     <div className={`card mb-3 ${styles["card-horizontal"]}`}>
       <div className="row justify-content-center align-items-center g-0">
@@ -10,7 +10,9 @@ const HorizontalCard = () => {
         </div>
         <div className="col-lg-8">
           <div className="card-body">
-            <h6 className={styles["card-title"]}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h6>
+            <a className={styles["link-article"]} href={`/berita/${props.id}`}>
+              <h6 className={styles["card-title"]}>UPTD Puskesmas Sambirejo Adakan Test Kebugaran Karyawan Puskesmas Sambirejo</h6>
+            </a>
             <div class="row g-2 mb-2">
               <div class="col-1">
                 <span className="fa-solid fa-calendar"></span>

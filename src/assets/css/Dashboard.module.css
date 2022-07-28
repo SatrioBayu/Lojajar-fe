@@ -1,0 +1,21 @@
+.content{
+    background-color: #f6f8fa;
+    width: 100%;
+}
+.content *{
+    font-family: "Poppins", sans-serif;
+}
+.main {
+    display: flex;
+    height: 100%;
+    min-height: 100vh;
+}
+.info-container{
+    background-color: #fff;
+    border-radius: 8px;
+}
+.subtitle{
+    font-weight: 400;
+    color: #5D646D;
+    margin-bottom: 0 !important;
+}

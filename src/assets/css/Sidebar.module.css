@@ -1,0 +1,15 @@
+.main{
+    background-color: rgba(1, 0, 57, 0.04);;
+}
+.main a:hover{
+    color: #1C8FB9;
+}
+.main .dropdown-menu li:hover{
+    background-color: #1C8FB9; 
+}
+.p{
+    margin-bottom: 0;
+}
+.dropdown:hover{
+    background-color: #D8EAA8 !important;
+}

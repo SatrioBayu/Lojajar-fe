@@ -1,3 +1,11 @@
 .desa{
     width: 2rem;
 }
+.admin{
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 12px !important;
+}
+.profile{
+    object-fit: cover;
+    width: 1.5rem;
+}

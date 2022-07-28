@@ -3,7 +3,7 @@ import styles from "../assets/css/Contact.module.css";
 const Contact = () => {
   return (
     <section className={`container my-5 ${styles.contact}`} id="contact">
-      <h1 className="text-center">Permohonan Surat Online</h1>
+      <h2 className="text-center">Permohonan Surat Online</h2>
       <hr className={styles["divider-custom"]} />
 
       <div className={`${styles["container-surat"]}`}>

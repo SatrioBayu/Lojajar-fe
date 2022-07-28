@@ -9,7 +9,7 @@ import { NavLink } from "react-router-dom";
 const Umkm = () => {
   return (
     <section className={`py-5 ${styles.bg}`}>
-      <h1 className="text-center">UMKM Desa</h1>
+      <h2 className="text-center">UMKM Desa</h2>
       <hr className={styles["divider-custom"]} />
       <div className="container">
         <Swiper

@@ -6,7 +6,7 @@ import WA from "../assets/images/wa.png";
 const Article = () => {
   return (
     <section className={`my-5 ${styles.article}`}>
-      <h1 className="text-center">Berita Desa</h1>
+      <h2 className="text-center">Berita Desa</h2>
       <hr className={styles["divider-custom"]} />
 
       <div className="container">

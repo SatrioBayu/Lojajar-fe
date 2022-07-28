@@ -1,0 +1,26 @@
+.container-custom{
+    padding-left: 0 !important;
+}
+.poppin{
+    font-family: 'Poppins', sans-serif;
+}
+.no-padding{
+    padding-right: 0;
+}
+.toggle{
+    cursor: pointer;
+}
+.desa{
+    font-family: 'Open Sans', sans-serif !important;
+}
+.placeholder::placeholder{
+    display: flex;
+}
+.images{
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+}
+.icon{
+    width: 3rem;
+}

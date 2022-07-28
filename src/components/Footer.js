@@ -1,4 +1,4 @@
-import LogoDesa from "../assets/images/image_14.png";
+import LogoDesa from "../assets/images/Lambang_Bondowoso.png";
 import styles from "../assets/css/Footer.module.css";
 
 const Footer = () => {
@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="container">
         <div className="row justify-content-center g-4">
           <div className="col-sm-6">
-            <img src={LogoDesa} className="mb-3" alt="Logo" />
+            <img src={LogoDesa} className={`mb-3 ${styles.desa}`} alt="Logo" />
             <p>Desa Duren, Kasar, Ganyuwangi Jawa Selatan, Indonesia</p>
             <p>&copy; 2022 Desa Duren. All Rights Reserved</p>
           </div>

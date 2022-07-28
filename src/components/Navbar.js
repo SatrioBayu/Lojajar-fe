@@ -1,4 +1,4 @@
-import LogoDesa from "../assets/images/image_14.png";
+import LogoDesa from "../assets/images/Lambang_Bondowoso.png";
 import styles from "../assets/css/Navbar.module.css";
 import { NavLink } from "react-router-dom";
 

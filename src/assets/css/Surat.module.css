@@ -1,0 +1,19 @@
+.content {
+    margin-top: 8rem;
+    font-family: Open Sans, sans-serif;
+}
+.surat-container{
+    border: 1px solid #D1D1D1;
+    border-radius: 8px;
+}
+.input-jawaban{
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid #D1D1D1;
+}
+.input-radio{
+    color: #5D646D;
+}
+.subtitle{
+    color: #5D646D
+}

@@ -2,11 +2,23 @@
     margin-top: 8rem;
     font-family: Open Sans, sans-serif;
 }
-
-.content p {
-    margin-bottom: 0;
+.deskripsi p{
+    color: #5D646D;
+    font-size: 16px;
 }
-
 .img{
     width: 100%;
+}
+.copy-link{
+    border: 1px solid #D1D1D1;
+    text-decoration: none;
+    border-radius: 3rem;
+    padding: 0.5rem;
+    color: black;
+    cursor: pointer;
+}
+.card-tag {
+    border-radius: 3rem;
+    background-color: #5EAD2B;
+    padding: 0.5rem;  
 }

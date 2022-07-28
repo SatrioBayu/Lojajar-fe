@@ -1,3 +1,5 @@
+import styles from "../assets/css/Contact.module.css";
+
 const Jumbotron = () => {
   return (
     <header className="masthead">
@@ -7,7 +9,7 @@ const Jumbotron = () => {
             <h1 className="text-white font-weight-bold">DESA LOJAJAR</h1>
             <h1 className="text-white font-weight-bold">KECAMATAN TENGGARENG</h1>
             <h1 className="text-white font-weight-bold">KABUPATEN BONDOWOSO</h1>
-            <hr className="divider" />
+            <hr className={styles["divider-custom"]} />
           </div>
         </div>
       </div>

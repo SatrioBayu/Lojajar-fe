@@ -14,7 +14,9 @@ const Contact = () => {
           </div>
           <div className="col-md-2"></div>
           <div className="col-md-4 py-3">
-            <button className={`btn ${styles["btn-more"]}`}>Ajukan Surat Online</button>
+            <a href="/permohonansurat" className={`btn ${styles["btn-more"]}`}>
+              Ajukan Surat Online
+            </a>
           </div>
         </div>
       </div>

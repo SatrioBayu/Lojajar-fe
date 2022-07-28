@@ -6,6 +6,7 @@ import Umkm from "./pages/Umkm";
 import Berita from "./pages/Berita";
 import DetailBerita from "./pages/DetailBerita";
 import DetailUmkm from "./pages/DetailUmkm";
+import Surat from "./pages/Surat";
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
         <Route path="/berita" element={<Berita />} />
         <Route path="/berita/:id" element={<DetailBerita />} />
         <Route path="/umkm/:id" element={<DetailUmkm />} />
+        <Route path="/permohonansurat" element={<Surat />} />
       </Routes>
     </BrowserRouter>
   );

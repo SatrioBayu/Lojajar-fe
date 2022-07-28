@@ -20,9 +20,11 @@ const SideCard = () => {
           </div>
           <h5 className={`fw-bold ${styles["card-title"]}`}>Warung Sawah Desa</h5>
           <p className={`${styles["card-text"]} mb-3`}>Ds. Krajan RT. 05 RW 01</p>
-          <h5 className={`fw-bold ${styles["card-title"]}`}>Rp.10.000 - 25.000</h5>
-          <a className={`${styles["card-link"]}`} href="">
-            Baca Selengkapnya
+          <h5 className={`fw-bold ${styles["card-title"]}`}>
+            <span className="fs-6 fw-normal">Buka: </span> 07.00 - 16.00 WIB
+          </h5>
+          <a className={`${styles["card-link"]}`} href="/umkm/1">
+            Lihat Selengkapnya
           </a>
         </div>
       </div>

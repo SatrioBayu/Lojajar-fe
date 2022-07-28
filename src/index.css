@@ -2642,7 +2642,7 @@ textarea.form-control-lg {
 }
 
 .form-check-input:checked {
-  background-color: #f4623a;
+  background-color: #6200EE;
   border-color: #f4623a;
 }
 
@@ -3267,14 +3267,14 @@ fieldset:disabled .btn {
 
 .btn-primary {
   color: #fff;
-  background-color: #f4623a;
-  border-color: #f4623a;
+  background-color: #1C8FB9;
+  border-color: #1C8FB9;
 }
 
 .btn-primary:hover {
   color: #fff;
-  background-color: #cf5331;
-  border-color: #c34e2e;
+  background-color: #207796;
+  border-color: #207796;
 }
 
 .btn-check:focus+.btn-primary,
@@ -8751,7 +8751,7 @@ fieldset:disabled .btn {
 
 .bg-primary {
   --bs-bg-opacity: 1;
-  background-color: rgba(var(--bs-primary-rgb), var(--bs-bg-opacity)) !important;
+  background-color: #F3F9FB !important;
 }
 
 .bg-secondary {
@@ -12298,11 +12298,11 @@ hr.divider-light {
 
 #mainNav .navbar-nav .nav-item .nav-link:hover,
 #mainNav .navbar-nav .nav-item .nav-link:active {
-  color: #f4623a;
+  color: #1C8FB9;
 }
 
 #mainNav .navbar-nav .nav-item .nav-link.active {
-  color: #f4623a !important;
+  color: #1C8FB9 !important;
 }
 
 @media (min-width: 992px) {
@@ -12326,7 +12326,7 @@ hr.divider-light {
   }
 
   #mainNav .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #1C8FB9;
   }
 
   #mainNav .navbar-nav .nav-item:last-child .nav-link {
@@ -12351,7 +12351,7 @@ hr.divider-light {
   }
 
   #mainNav.navbar-shrink .navbar-nav .nav-item .nav-link:hover {
-    color: #f4623a;
+    color: #1C8FB9;
   }
 }
 
@@ -12502,7 +12502,7 @@ header.masthead .h1 {
 }
 
 .dataDesa {
-  color: white;
+  color: black;
   text-align: center;
   margin-left: auto;
   margin-right: auto;

@@ -13,6 +13,7 @@ hr.divider-custom {
     max-width: 3.25rem;
     margin: 1.5rem auto;
     background-color: #1C8FB9;
+    opacity: 1;
 }
 .swiper-pagination{
     position: relative !important;

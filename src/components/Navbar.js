@@ -1,14 +1,15 @@
 import LogoDesa from "../assets/images/image_14.png";
 import styles from "../assets/css/Navbar.module.css";
+import { NavLink } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav className="navbar navbar-expand-lg navbar-light fixed-top py-3" id="mainNav">
       <div className="container px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
-        <a className="navbar-brand" href="/">
+        <NavLink className="navbar-brand" to="/">
           E-LOJAJAR
-        </a>
+        </NavLink>
         <button
           className="navbar-toggler navbar-toggler-right"
           type="button"
@@ -23,24 +24,24 @@ const Navbar = () => {
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto my-2 my-lg-0">
             <li className="nav-item">
-              <a className="nav-link" href="/">
+              <NavLink className="nav-link" to="/">
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/berita">
+              <NavLink className="nav-link" to="/berita">
                 Berita
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="/umkm">
+              <NavLink className="nav-link" to="/umkm">
                 UMKM
-              </a>
+              </NavLink>
             </li>
             <li className="nav-item">
-              <a className="nav-link" href="#contact">
+              <NavLink className="nav-link" to="/permohonansurat">
                 Surat Online
-              </a>
+              </NavLink>
             </li>
           </ul>
         </div>

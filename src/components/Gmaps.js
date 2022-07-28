@@ -1,8 +1,9 @@
 import styles from "../assets/css/Contact.module.css";
+import bgstyles from "../assets/css/Background.module.css";
 
 const Gmaps = () => {
   return (
-    <section className="page-section bg-primary" id="peta">
+    <section className={`page-section ${bgstyles["bg-primary"]}`} id="peta">
       <h2 className="dataDesa">Peta Desa</h2>
       <hr className={styles["divider-custom"]} />
       <div id="map-container-google-1" className="z-depth-1-half map-container" style={{ height: "500px" }}>

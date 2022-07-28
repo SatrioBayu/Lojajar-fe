@@ -5,6 +5,3 @@
 .swiper-pagination-bullet-active{
   background-color: #1C8FB9 !important;
 }
-#mainDashboard {
-  transition: margin-left 0.5s;
-}

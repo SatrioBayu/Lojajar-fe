@@ -1,6 +1,7 @@
+import styles from "../assets/css/Background.module.css";
 const About = () => {
   return (
-    <section className="page-section bg-primary" id="about">
+    <section className={`page-section ${styles["bg-primary"]}`} id="about">
       <div className="container px-4 px-lg-5">
         <table className="table table-borderless">
           <thead>

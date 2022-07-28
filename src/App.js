@@ -10,6 +10,7 @@ import Surat from "./pages/Surat";
 import Protected from "./components/Protected";
 import Dashboard from "./pages/Dashboard";
 import TambahBerita from "./pages/TambahBerita";
+import TambahUmkm from "./pages/TambahUmkm";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           }
         />
         <Route path="/tambahberita" element={<TambahBerita />} />
+        <Route path="/tambahumkm" element={<TambahUmkm />} />
       </Routes>
     </BrowserRouter>
   );

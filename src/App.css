@@ -13,3 +13,12 @@
     display: none !important;
   }
 }
+.table-borderless{
+  border: 1px solid #5D646D;
+}
+.table-borderless>thead>tr>th{
+  border: 1px solid #5D646D;
+}
+.table-borderless>tbody>tr>td{
+  border: 1px solid #5D646D;
+}

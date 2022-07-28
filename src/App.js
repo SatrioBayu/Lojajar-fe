@@ -11,6 +11,8 @@ import Protected from "./components/Protected";
 import Dashboard from "./pages/Dashboard";
 import TambahBerita from "./pages/TambahBerita";
 import TambahUmkm from "./pages/TambahUmkm";
+import ListBerita from "./pages/ListBerita";
+import ListUmkm from "./pages/ListUmkm";
 
 function App() {
   return (
@@ -36,6 +38,8 @@ function App() {
         />
         <Route path="/tambahberita" element={<TambahBerita />} />
         <Route path="/tambahumkm" element={<TambahUmkm />} />
+        <Route path="/listberita" element={<ListBerita />} />
+        <Route path="/listumkm" element={<ListUmkm />} />
       </Routes>
     </BrowserRouter>
   );

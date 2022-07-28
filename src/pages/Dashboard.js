@@ -13,9 +13,9 @@ const Dashboard = () => {
         <div className={`py-4 ${styles.content}`}>
           <div class="container">
             <h3>Dashboard</h3>
-            <div class="row">
+            <div class="row g-3">
               <div class="col-sm-4">
-                <div class="card mb-3 p-3">
+                <div class="card h-100 mb-3 p-3">
                   <div class="row align-items-center g-0">
                     <div class="col-lg-4 d-flex justify-content-center">
                       <img src={Layer} class="img-fluid rounded-start" alt="image" />
@@ -30,7 +30,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div class="col-sm-4">
-                <div class="card mb-3 p-3">
+                <div class="card h-100 mb-3 p-3">
                   <div class="row align-items-center g-0">
                     <div class="col-lg-4 d-flex justify-content-center">
                       <img src={Layer2} class="img-fluid rounded-start" alt="image" />
@@ -45,7 +45,7 @@ const Dashboard = () => {
                 </div>
               </div>
               <div class="col-sm-4">
-                <div class="card mb-3 p-3">
+                <div class="card h-100 mb-3 p-3">
                   <div class="row align-items-center g-0">
                     <div class="col-lg-4 d-flex justify-content-center">
                       <img src={Layer} class="img-fluid rounded-start" alt="image" />

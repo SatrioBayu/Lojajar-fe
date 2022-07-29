@@ -6,7 +6,7 @@ const Services = () => {
       <div className="container px-4 px-lg-5">
         <h2 className="text-center mt-0">Data Desa</h2>
         <hr className={styles["divider-custom"]} />
-        <div className="row gx-4 gx-lg-5">
+        <div className="row mt-5 gx-4 gx-lg-5">
           <div className="col-lg-3 col-md-6 text-center">
             <div className="mt-5">
               <div className="mb-2">

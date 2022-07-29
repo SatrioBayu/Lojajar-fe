@@ -47,11 +47,19 @@ const Berita = () => {
                   <h5>{error}</h5>
                 </div>
               ) : (
-                <div className="col-lg-8">
-                  {berita.map((berita) => (
-                    <HorizontalCard key={berita.id} data={berita} />
-                  ))}
-                </div>
+                <>
+                  {berita.length > 0 ? (
+                    <div className="col-lg-8">
+                      {berita.map((item) => (
+                        <HorizontalCard key={item.id} data={item} />
+                      ))}
+                    </div>
+                  ) : (
+                    <div className="col-lg-8 d-flex justify-content-center">
+                      <h5>Tidak ada berita</h5>
+                    </div>
+                  )}
+                </>
               )}
             </>
           )}

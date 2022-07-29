@@ -46,7 +46,7 @@ const DetailUmkm = () => {
           <Navbar />
           <div className={`container ${styles.content}`}>
             <div className="row gx-5 my-4">
-              <div className="col-lg-8">
+              <div className={`col-lg-8 ${styles.font}`}>
                 {/* Images */}
                 <div className="row g-2 align-items-center">
                   {umkm.UmkmImages.length > 1 ? (
@@ -68,6 +68,9 @@ const DetailUmkm = () => {
                 </div>
                 {/* Tag */}
                 <div className="my-4 g-2 d-flex align-items-center flex-wrap">
+                  {umkm.jenis == "Makanan" && <p className={`badge ${styles["card-tag--makanan"]}`}>{umkm.jenis}</p>}
+                  {umkm.jenis == "Barang" && <p className={`badge ${styles["card-tag--barang"]}`}>{umkm.jenis}</p>}
+                  {umkm.jenis == "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{umkm.jenis}</p>}
                   <p className={`badge me-auto ${styles["card-tag"]}`}>{umkm.jenis}</p>
                   <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsecondhand-seven.vercel.app/" target="_blank">
                     <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
@@ -81,11 +84,11 @@ const DetailUmkm = () => {
                 </div>
                 {/* Body */}
                 <div className="umkm-body">
-                  <h3>{umkm.nama}</h3>
+                  <h3 className="fw-bold">{umkm.nama}</h3>
                   <p>Lokasi : {umkm.alamat}</p>
-                  <h4>No Hp : {umkm.noHp}</h4>
+                  <h5 className="fw-bold">No Hp : {umkm.noHp}</h5>
                   <hr />
-                  <h6 className="mt-3">Deskripsi</h6>
+                  <h6 className="mt-3 fw-bold">Deskripsi</h6>
                   <div className={styles.deskripsi}>
                     <p>
                       Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, eos dolorum magnam impedit repellendus reiciendis perspiciatis nam dicta tempora assumenda facilis culpa veritatis

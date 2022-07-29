@@ -48,25 +48,19 @@ const Umkm = () => {
                 </div>
               ) : (
                 <div className="col-lg-8">
-                  <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-                    {umkm.map((umkm) => (
-                      <SideCard key={umkm.id} data={umkm} />
-                    ))}
-                  </div>
+                  {umkm.length > 0 ? (
+                    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+                      {umkm.map((umkm) => (
+                        <SideCard key={umkm.id} data={umkm} />
+                      ))}
+                    </div>
+                  ) : (
+                    <h5 className="text-center">Tidak Ada UMKM</h5>
+                  )}
                 </div>
               )}
             </>
           )}
-          {/* <div className="col-lg-8">
-            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
-              <SideCard />
-              <SideCard />
-              <SideCard />
-              <SideCard />
-              <SideCard />
-              <SideCard />
-            </div>
-          </div> */}
           <SideMap />
         </div>
       </div>

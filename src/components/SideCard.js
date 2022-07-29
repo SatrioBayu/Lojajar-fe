@@ -10,7 +10,9 @@ const SideCard = (props) => {
         <div className="card-body">
           <div className="row">
             <div className="col-6">
-              <p className={`badge ${styles["card-tag"]}`}>{props.data.jenis}</p>
+              {props.data.jenis == "Makanan" && <p className={`badge ${styles["card-tag--makanan"]}`}>{props.data.jenis}</p>}
+              {props.data.jenis == "Barang" && <p className={`badge ${styles["card-tag--barang"]}`}>{props.data.jenis}</p>}
+              {props.data.jenis == "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{props.data.jenis}</p>}
             </div>
             <div className="d-flex justify-content-end col-6">
               <img src={FB} className={`me-3 ${styles["card-icon"]}`} alt="fb" />

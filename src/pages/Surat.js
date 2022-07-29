@@ -38,15 +38,15 @@ const Surat = () => {
               <form onSubmit={handleSubmit} className="p-4">
                 {/* Nama */}
                 <h5 className="mb-3">Nama</h5>
-                <input required onChange={(e) => setNama(e.target.value)} type="text" placeholder="Jawaban Anda" className={`mb-4 ${styles["input-jawaban"]}`} />
+                <input size={50} required onChange={(e) => setNama(e.target.value)} type="text" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
 
                 {/* NIK */}
                 <h5 className="mb-3">NIK</h5>
-                <input required onChange={(e) => setNik(e.target.value)} type="text" placeholder="Jawaban Anda" className={`mb-4 ${styles["input-jawaban"]}`} />
+                <input size={50} required onChange={(e) => setNik(e.target.value)} type="text" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
 
                 {/* Email */}
                 <h5 className="mb-3">Email</h5>
-                <input required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`mb-4 ${styles["input-jawaban"]}`} />
+                <input size={50} required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
 
                 {/* Jenis Surat */}
                 <h5 className="mb-3">Pilih Jenis Surat</h5>

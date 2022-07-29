@@ -47,8 +47,8 @@ const DetailBerita = () => {
           <Navbar />
           <div className={`container ${styles.content}`}>
             <div className="row gx-5 my-5">
-              <div className="col-lg-8">
-                <h4>{article.judul}</h4>
+              <div className={`col-lg-8 ${styles.font}`}>
+                <h4 className="fw-bold">{article.judul}</h4>
                 <div className="row g-2 align-items-center">
                   <div className="col-sm-6">
                     <p className={`${styles.secondary}`}>27 Juli 2022</p>
@@ -67,32 +67,32 @@ const DetailBerita = () => {
                   </div>
                 </div>
                 <img src={article.ArticleImages[0].image} className={`${styles.image}`} alt="article" />
-                <p className="mt-4">
+                <p className={`mt-4 ${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima corporis ullam nihil voluptatibus voluptates, suscipit optio odit maxime ut molestiae ipsam? Vero adipisci rerum
                   asperiores! Exercitationem illo reiciendis at nesciunt?
                 </p>
                 <br />
-                <p>
+                <p className={`${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore accusantium provident similique cupiditate, corrupti ullam ipsam, sed non tempora autem deserunt
                   reprehenderit! Quisquam voluptatum ut sequi delectus dignissimos porro?
                 </p>
                 <br />
-                <p>
+                <p className={`${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi aliquam laboriosam quia commodi! Dolorum, dolores architecto consequuntur in, ullam quia deserunt expedita modi
                   adipisci similique reiciendis dicta quam! Consequatur.
                 </p>
                 <br />
-                <p>
+                <p className={`${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima corporis ullam nihil voluptatibus voluptates, suscipit optio odit maxime ut molestiae ipsam? Vero adipisci rerum
                   asperiores! Exercitationem illo reiciendis at nesciunt?
                 </p>
                 <br />
-                <p>
+                <p className={`${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore accusantium provident similique cupiditate, corrupti ullam ipsam, sed non tempora autem deserunt
                   reprehenderit! Quisquam voluptatum ut sequi delectus dignissimos porro?
                 </p>
                 <br />
-                <p>
+                <p className={`${styles.secondary}`}>
                   Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi aliquam laboriosam quia commodi! Dolorum, dolores architecto consequuntur in, ullam quia deserunt expedita modi
                   adipisci similique reiciendis dicta quam! Consequatur.
                 </p>

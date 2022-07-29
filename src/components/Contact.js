@@ -6,7 +6,7 @@ const Contact = () => {
       <h2 className="text-center">Permohonan Surat Online</h2>
       <hr className={styles["divider-custom"]} />
 
-      <div className={`${styles["container-surat"]}`}>
+      <div className={`mt-5 ${styles["container-surat"]}`}>
         <div className="row">
           <div className="col-md-6">
             <h3>Butuh Surat Administrasi?</h3>

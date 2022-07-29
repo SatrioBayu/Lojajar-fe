@@ -7,10 +7,20 @@
     border: 0px !important;
 }
 
-.card-tag {
+.card-tag--makanan {
     border-radius: 3rem;
     background-color: #5EAD2B;
-    font-family: Open Sans, sans-serif;
+    font-family: "Open Sans", sans-serif;
+}
+.card-tag--barang{
+    border-radius: 3rem;
+    background-color: #1C8FB9;
+    font-family: "Open Sans", sans-serif;
+}
+.card-tag--jasa{
+    border-radius: 3rem;
+    background-color: #FFC400;
+    font-family: "Open Sans", sans-serif;
 }
 
 .content p {

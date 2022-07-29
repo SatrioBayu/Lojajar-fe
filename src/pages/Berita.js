@@ -3,20 +3,58 @@ import Navbar from "../components/Navbar";
 import styles from "../assets/css/Berita.module.css";
 import SideMap from "../components/SideMap";
 import HorizontalCard from "../components/HorizontalCard";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 const Berita = () => {
+  const [loading, setLoading] = useState(true);
+  const [berita, setBerita] = useState(null);
+  const [error, setError] = useState(null);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const berita = await (await axios.get("http://localhost:8000/article")).data;
+        setBerita(berita.data);
+        console.log(berita.data);
+        setLoading(false);
+      } catch (error) {
+        console.log(error);
+        setLoading(false);
+        setError("Terjadi kesalahan pada server");
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
       <Navbar />
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">Berita Desa</h3>
         <p className="text-center mb-5">Berita terkini seputar kejadian dan kegiatan di Desa Lojajar</p>
-        <div className="row my-5">
-          <div className="col-lg-8">
-            <HorizontalCard id="1" />
-            <HorizontalCard id="2" />
-            <HorizontalCard id="3" />
-          </div>
+        <div className="row gx-5 my-5">
+          {loading ? (
+            <div className="col-lg-8 d-flex justify-content-center">
+              <div className="spinner-border" role="status">
+                <span className="sr-only">Loading...</span>
+              </div>
+            </div>
+          ) : (
+            <>
+              {error ? (
+                <div className="col-lg-8 d-flex justify-content-center">
+                  <h5>{error}</h5>
+                </div>
+              ) : (
+                <div className="col-lg-8">
+                  {berita.map((berita) => (
+                    <HorizontalCard key={berita.id} data={berita} />
+                  ))}
+                </div>
+              )}
+            </>
+          )}
           <SideMap />
         </div>
       </div>

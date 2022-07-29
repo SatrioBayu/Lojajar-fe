@@ -23,7 +23,10 @@
     padding: 1rem;
     color: #fff;
 }
-
+.card-img{
+    height: 10rem !important;
+    object-fit: cover;
+}
 .card-title {
     font-weight: 400;
     font-family: Open Sans, sans-serif;

@@ -11,9 +11,9 @@ const AdminNavbar = () => {
         <NavLink className="navbar-brand" to="/">
           E-LOJAJAR
         </NavLink>
-        <button className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
+        <a className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           <span className="navbar-toggler-icon"></span>
-        </button>
+        </a>
         <div className="collapse navbar-collapse" id="navbarResponsive">
           <ul className="navbar-nav ms-auto my-2 my-lg-0">
             <li className="nav-item">

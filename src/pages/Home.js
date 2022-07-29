@@ -9,9 +9,28 @@ import Contact from "../components/Contact";
 import Footer from "../components/Footer";
 import Article from "../components/Article";
 import Umkm from "../components/Umkm";
+import axios from "axios";
+import { useState } from "react";
 
 const Home = () => {
+  const [articles, setArticles] = useState([]);
+  const [umkm, setUmkm] = useState([]);
+
+  const fetchData = async () => {
+    try {
+      const article = await (await axios.get("http://localhost:8000/article")).data;
+      const umkm = await (await axios.get("http://localhost:8000/umkm")).data;
+      console.log(article);
+      console.log(umkm);
+      setArticles(article.data.slice(0, 6));
+      setUmkm(umkm.data.slice(0, 6));
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   useEffect(() => {
+    fetchData();
     const script = document.createElement("script");
     script.src = "/js/scripts.js";
     script.defer = true;
@@ -30,8 +49,8 @@ const Home = () => {
       <Services />
       <Portfolio />
       <Gmaps />
-      <Article />
-      <Umkm />
+      <Article data={articles} />
+      <Umkm data={umkm} />
       <Contact />
       <Footer />
     </div>

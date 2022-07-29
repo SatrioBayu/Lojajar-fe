@@ -26,7 +26,7 @@ const Surat = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">Permohonan Surat Online</h3>
         <p className={`text-center mb-5 ${styles.subtitle}`}>Ajukan pembuatan surat administrasi secara online disini</p>
-        <div className="row g-4 my-4">
+        <div className="row g-5 my-4">
           <div className="col-lg-8">
             <div className={`${styles["surat-container"]}`}>
               <form onSubmit={handleSubmit} className="p-4">

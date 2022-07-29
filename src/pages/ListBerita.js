@@ -18,7 +18,7 @@ const ListBerita = () => {
                 <h6>List Artikel</h6>
               </div>
               <div className="p-3 table-responsive-md">
-                <table class="table table-sm table-borderless">
+                <table class="table table-sm table-bordered">
                   <thead>
                     <tr>
                       <th scope="col">No</th>

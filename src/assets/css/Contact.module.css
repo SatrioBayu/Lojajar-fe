@@ -18,7 +18,7 @@ hr.divider-custom {
     color: #5D646D;
 }
 .btn-more {
-    background: #1C8FB9;
-    border-radius: 8px;
-    color: #fff;
+    background: #1C8FB9 !important;
+    border-radius: 8px !important;
+    color: #fff !important;
 }

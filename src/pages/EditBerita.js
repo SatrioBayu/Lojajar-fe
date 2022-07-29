@@ -2,12 +2,13 @@ import AdminNavbar from "../components/AdminNavbar";
 import styles from "../assets/css/TambahBerita.module.css";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
+import ArticleImage from "../assets/images/Rectangle 160.png";
 
-const TambahBerita = () => {
-  const [image, setImage] = useState(null);
-  const [imagePreview, setImagePreview] = useState(null);
-  const [judul, setJudul] = useState("");
-  const [isi, setIsi] = useState("");
+const EditBerita = () => {
+  const [image, setImage] = useState(ArticleImage);
+  const [imagePreview, setImagePreview] = useState(ArticleImage);
+  const [judul, setJudul] = useState("Mobile Legends");
+  const [isi, setIsi] = useState("Mobile Legends adalah game mobile yang dibuat oleh Riot Games dan dikembangkan oleh Riot Games. Mobile Legends berbasis permainan yang ber");
 
   const handleUploadImage = (e) => {
     setImage(e.target.files[0]);
@@ -16,11 +17,7 @@ const TambahBerita = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(judul);
-    console.log(isi);
-    console.log(image);
   };
-
   return (
     <div>
       <AdminNavbar />
@@ -28,7 +25,7 @@ const TambahBerita = () => {
         <Sidebar />
         <div className={`p-4 ${styles.content}`}>
           <div className="container">
-            <h3>Tambah Berita</h3>
+            <h3>Edit Berita</h3>
             <p>Anda dapat menambah berita terkini</p>
 
             <form onSubmit={handleSubmit} className={`${styles.form}`}>
@@ -39,11 +36,11 @@ const TambahBerita = () => {
               </div>
               <div className="mb-4">
                 <h5>Judul Berita</h5>
-                <input required onChange={(e) => setJudul(e.target.value)} className="form-control" type="text" />
+                <input required value={judul} onChange={(e) => setJudul(e.target.value)} className="form-control" type="text" />
               </div>
               <div className="mb-4">
                 <h5>Isi Berita</h5>
-                <textarea required onChange={(e) => setIsi(e.target.value)} class="form-control p-3" rows="10" placeholder="Tuliskan sesuatu disini" id="floatingTextarea"></textarea>
+                <textarea required value={isi} onChange={(e) => setIsi(e.target.value)} class="form-control p-3" rows="10" placeholder="Tuliskan sesuatu disini" id="floatingTextarea"></textarea>
               </div>
               <div class="d-flex">
                 <button type="submit" className="me-3 btn btn-primary">
@@ -61,4 +58,4 @@ const TambahBerita = () => {
   );
 };
 
-export default TambahBerita;
+export default EditBerita;

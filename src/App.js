@@ -13,6 +13,8 @@ import TambahBerita from "./pages/TambahBerita";
 import TambahUmkm from "./pages/TambahUmkm";
 import ListBerita from "./pages/ListBerita";
 import ListUmkm from "./pages/ListUmkm";
+import EditBerita from "./pages/EditBerita";
+import EditUmkm from "./pages/EditUmkm";
 
 function App() {
   return (
@@ -40,6 +42,8 @@ function App() {
         <Route path="/tambahumkm" element={<TambahUmkm />} />
         <Route path="/listberita" element={<ListBerita />} />
         <Route path="/listumkm" element={<ListUmkm />} />
+        <Route path="/editberita/:id" element={<EditBerita />} />
+        <Route path="/editumkm/:id" element={<EditUmkm />} />
       </Routes>
     </BrowserRouter>
   );

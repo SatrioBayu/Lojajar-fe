@@ -33,17 +33,59 @@ function App() {
         <Route
           path="/dashboard"
           element={
-            // <Protected>
-            <Dashboard />
-            // </Protected>
+            <Protected>
+              <Dashboard />
+            </Protected>
           }
         />
-        <Route path="/tambahberita" element={<TambahBerita />} />
-        <Route path="/tambahumkm" element={<TambahUmkm />} />
-        <Route path="/listberita" element={<ListBerita />} />
-        <Route path="/listumkm" element={<ListUmkm />} />
-        <Route path="/editberita/:id" element={<EditBerita />} />
-        <Route path="/editumkm/:id" element={<EditUmkm />} />
+        <Route
+          path="/tambahberita"
+          element={
+            <Protected>
+              <TambahBerita />
+            </Protected>
+          }
+        />
+        <Route
+          path="/tambahumkm"
+          element={
+            <Protected>
+              <TambahUmkm />
+            </Protected>
+          }
+        />
+        <Route
+          path="/listberita"
+          element={
+            <Protected>
+              <ListBerita />
+            </Protected>
+          }
+        />
+        <Route
+          path="/listumkm"
+          element={
+            <Protected>
+              <ListUmkm />
+            </Protected>
+          }
+        />
+        <Route
+          path="/editberita/:id"
+          element={
+            <Protected>
+              <EditBerita />
+            </Protected>
+          }
+        />
+        <Route
+          path="/editumkm/:id"
+          element={
+            <Protected>
+              <EditUmkm />
+            </Protected>
+          }
+        />
       </Routes>
     </BrowserRouter>
   );

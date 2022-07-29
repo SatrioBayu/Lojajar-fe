@@ -13,7 +13,7 @@ const Article = (props) => {
           {props.data.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
-                <img src={item.ArticleImages[0].image} className="card-img-top" alt="..." />
+                <img src={item.ArticleImages[0].image} className={styles["card-img"]} alt="..." />
                 <div className="card-body">
                   <div className="row">
                     <div className="col-6">

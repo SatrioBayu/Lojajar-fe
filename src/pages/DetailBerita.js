@@ -46,7 +46,7 @@ const DetailBerita = () => {
         <>
           <Navbar />
           <div className={`container ${styles.content}`}>
-            <div className="row g-5 my-5">
+            <div className="row gx-5 my-5">
               <div className="col-lg-8">
                 <h4>{article.judul}</h4>
                 <div className="row g-2 align-items-center">

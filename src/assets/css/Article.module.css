@@ -15,6 +15,10 @@
 .card-link{
     color: #1C8FB9;
 }
+.card-img{
+    height: 12rem;
+    object-fit: cover;
+}
 .btn-more{
     background: #1C8FB9 !important;
     border-radius: 8px !important;

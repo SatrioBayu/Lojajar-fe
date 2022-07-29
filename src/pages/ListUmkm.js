@@ -7,6 +7,7 @@ import axios from "axios";
 const ListUmkm = () => {
   const [umkm, setUmkm] = useState([]);
   const [error, setError] = useState(null);
+  const [errorDelete, setErrorDelete] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -20,6 +21,20 @@ const ListUmkm = () => {
     fetchData();
   }, []);
 
+  const handleDelete = async (e) => {
+    try {
+      const id = e.target.value;
+      await axios.delete(`http://localhost:8000/umkm/${id}`, {
+        headers: {
+          Authorization: `Bearer ${localStorage.getItem("token")}`,
+        },
+      });
+      window.location.reload();
+    } catch (error) {
+      setErrorDelete("Terjadi kesalahan pada server");
+    }
+  };
+
   return (
     <div>
       <AdminNavbar />
@@ -29,6 +44,11 @@ const ListUmkm = () => {
           <div className="container">
             <h3>List UMKM</h3>
             <p>Anda dapat mengedit dan menghapus UMKM yang telah di post pada halaman Tambah UMKM</p>
+            {errorDelete && (
+              <div className="alert alert-danger" role="alert">
+                {errorDelete}
+              </div>
+            )}
             {error ? (
               <div className="alert alert-danger" role="alert">
                 {error}
@@ -61,15 +81,19 @@ const ListUmkm = () => {
                             <img src={item.UmkmImages[0].image} className={`img-fluid`} alt="" />
                           </td>
                           <td>
-                            <a href="/editberita/1" className="btn btn-primary">
+                            <a href={`/editumkm/${item.id}`} className="btn btn-primary">
                               Edit
                             </a>
                           </td>
                           <td>
-                            <a className="btn btn-danger">Hapus</a>
+                            <button value={item.id} onClick={handleDelete} className="btn btn-danger">
+                              Hapus
+                            </button>
                           </td>
                           <td>
-                            <a className="btn btn-success">Lihat</a>
+                            <a href={`/umkm/${item.id}`} className="btn btn-success">
+                              Lihat
+                            </a>
                           </td>
                         </tr>
                       ))}

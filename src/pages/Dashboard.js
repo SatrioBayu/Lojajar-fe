@@ -30,49 +30,49 @@ const Dashboard = () => {
       <div className={`${styles.main}`}>
         <Sidebar />
         <div className={`py-4 ${styles.content}`}>
-          <div class="container">
+          <div className="container">
             <h3>Dashboard</h3>
-            <div class="row g-3">
-              <div class="col-sm-4">
-                <div class="card h-100 mb-3 p-3">
-                  <div class="row align-items-center g-0">
-                    <div class="col-lg-4 d-flex justify-content-center">
-                      <img src={Layer} class="img-fluid rounded-start" alt="image" />
+            <div className="row g-3">
+              <div className="col-sm-4">
+                <div className="card h-100 mb-3 p-3">
+                  <div className="row align-items-center g-0">
+                    <div className="col-lg-4 d-flex justify-content-center">
+                      <img src={Layer} className="img-fluid rounded-start" alt="image" />
                     </div>
-                    <div class="col-lg-8">
-                      <div class="card-body">
-                        <h4 class="fw-bold card-title">3.409</h4>
-                        <p class="card-text">Pengunjung</p>
+                    <div className="col-lg-8">
+                      <div className="card-body">
+                        <h4 className="fw-bold card-title">3.409</h4>
+                        <p className="card-text">Pengunjung</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="card h-100 mb-3 p-3">
-                  <div class="row align-items-center g-0">
-                    <div class="col-lg-4 d-flex justify-content-center">
-                      <img src={Layer2} class="img-fluid rounded-start" alt="image" />
+              <div className="col-sm-4">
+                <div className="card h-100 mb-3 p-3">
+                  <div className="row align-items-center g-0">
+                    <div className="col-lg-4 d-flex justify-content-center">
+                      <img src={Layer2} className="img-fluid rounded-start" alt="image" />
                     </div>
-                    <div class="col-lg-8">
-                      <div class="card-body">
-                        <h4 class="card-title fw-bold">{berita}</h4>
-                        <p class="card-text">Berita</p>
+                    <div className="col-lg-8">
+                      <div className="card-body">
+                        <h4 className="card-title fw-bold">{berita}</h4>
+                        <p className="card-text">Berita</p>
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-sm-4">
-                <div class="card h-100 mb-3 p-3">
-                  <div class="row align-items-center g-0">
-                    <div class="col-lg-4 d-flex justify-content-center">
-                      <img src={Layer} class="img-fluid rounded-start" alt="image" />
+              <div className="col-sm-4">
+                <div className="card h-100 mb-3 p-3">
+                  <div className="row align-items-center g-0">
+                    <div className="col-lg-4 d-flex justify-content-center">
+                      <img src={Layer} className="img-fluid rounded-start" alt="image" />
                     </div>
-                    <div class="col-lg-8">
-                      <div class="card-body">
-                        <h4 class="card-title fw-bold">{umkm}</h4>
-                        <p class="card-text">UMKM</p>
+                    <div className="col-lg-8">
+                      <div className="card-body">
+                        <h4 className="card-title fw-bold">{umkm}</h4>
+                        <p className="card-text">UMKM</p>
                       </div>
                     </div>
                   </div>

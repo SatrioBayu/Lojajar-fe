@@ -13,7 +13,7 @@ const TambahUmkm = () => {
   const [alamat, setAlamat] = useState("");
   const [deskripsi, setDeskripsi] = useState("");
   const [noHp, setNoHp] = useState("");
-  const [choice, setChoice] = useState(1);
+  const [choice, setChoice] = useState("Makanan");
   const [error, setError] = useState("");
   const navigate = useNavigate();
 

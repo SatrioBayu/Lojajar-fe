@@ -1,7 +1,13 @@
 import styles from "../assets/css/Sidebar.module.css";
 import { CDBSidebar, CDBSidebarContent, CDBSidebarHeader, CDBSidebarMenu, CDBSidebarMenuItem, CDBSidebarFooter } from "cdbreact";
-
+import { useNavigate } from "react-router-dom";
 const Sidebar = () => {
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    navigate("/login");
+  };
   return (
     <div className={styles.main}>
       <CDBSidebar textColor="#333" backgroundColor="#f0f0f0">
@@ -12,38 +18,38 @@ const Sidebar = () => {
             <a href="/dashboard">
               <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
             </a>
-            <div class="dropdown">
+            <div className="dropdown">
               <CDBSidebarMenuItem icon="sticky-note">
-                <p class={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Artikel
                 </p>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li>
                     <a className="dropdown-item" href="/tambahberita">
                       Tambah Berita
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/listberita">
+                    <a className="dropdown-item" href="/listberita">
                       List Berita
                     </a>
                   </li>
                 </ul>
               </CDBSidebarMenuItem>
             </div>
-            <div class="dropdown">
+            <div className="dropdown">
               <CDBSidebarMenuItem icon="chart-line" iconType="solid">
-                <p class={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   UMKM
                 </p>
-                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li>
-                    <a class="dropdown-item" href="/tambahumkm">
+                    <a className="dropdown-item" href="/tambahumkm">
                       Tambah UMKM
                     </a>
                   </li>
                   <li>
-                    <a class="dropdown-item" href="/listumkm">
+                    <a className="dropdown-item" href="/listumkm">
                       List UMKM
                     </a>
                   </li>
@@ -51,7 +57,7 @@ const Sidebar = () => {
               </CDBSidebarMenuItem>
             </div>
             <CDBSidebarMenuItem>Akun</CDBSidebarMenuItem>
-            <a href="#">
+            <a href="#" onClick={handleLogout}>
               <CDBSidebarMenuItem icon="sign-out-alt" className="text">
                 Signout
               </CDBSidebarMenuItem>

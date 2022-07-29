@@ -3,6 +3,9 @@ import Navbar from "../components/Navbar";
 import styles from "../assets/css/Surat.module.css";
 import SideMap from "../components/SideMap";
 import { useState } from "react";
+import axios from "axios";
+import { useNavigate } from "react-router-dom";
+import Modal from "../components/Modal";
 
 const Surat = () => {
   const [nama, setNama] = useState("");
@@ -11,13 +14,16 @@ const Surat = () => {
   const [jenisSurat, setJenisSurat] = useState("");
   const [keterangan, setKeterangan] = useState("");
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log(nama);
-    console.log(nik);
-    console.log(email);
-    console.log(jenisSurat);
-    console.log(keterangan);
+    const data = {
+      nama,
+      nik,
+      email,
+      jenis: jenisSurat,
+      keterangan,
+    };
+    console.log(data);
   };
 
   return (
@@ -26,7 +32,7 @@ const Surat = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">Permohonan Surat Online</h3>
         <p className={`text-center mb-5 ${styles.subtitle}`}>Ajukan pembuatan surat administrasi secara online disini</p>
-        <div className="row g-5 my-4">
+        <div className="row gx-5 my-4">
           <div className="col-lg-8">
             <div className={`${styles["surat-container"]}`}>
               <form onSubmit={handleSubmit} className="p-4">
@@ -40,7 +46,7 @@ const Surat = () => {
 
                 {/* Email */}
                 <h5 className="mb-3">Email</h5>
-                <input required onChange={(e) => setEmail(e.target.value)} type="text" placeholder="Jawaban Anda" className={`mb-4 ${styles["input-jawaban"]}`} />
+                <input required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`mb-4 ${styles["input-jawaban"]}`} />
 
                 {/* Jenis Surat */}
                 <h5 className="mb-3">Pilih Jenis Surat</h5>
@@ -67,13 +73,19 @@ const Surat = () => {
                 <h5>Keterangan</h5>
                 <textarea
                   onChange={(e) => setKeterangan(e.target.value)}
-                  class="form-control my-4 p-3"
+                  className="form-control my-4 p-3"
                   rows="4"
                   placeholder="Ingin membuat surat keterangan untuk menikah pada bulan september 2022"
                   id="floatingTextarea"
                 ></textarea>
-                <button className="btn btn-primary px-3">Kirim</button>
+                <button type="submit" className={`btn px-3 ${styles["btn-more"]}`}>
+                  Kirim
+                </button>
+                {/* <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="btn btn-primary px-3">
+                  Kirim
+                </button> */}
               </form>
+              <Modal />
             </div>
           </div>
           <SideMap />

@@ -3,19 +3,37 @@ import LogoDesa from "../assets/images/Lambang_Bondowoso.png";
 import styles from "../assets/css/Login.module.css";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 
 const Login = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const toggle = () => {
     setIsOpen(!isOpen);
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("submit");
-    navigate("/dashboard");
+    setLoading(true);
+    const data = { username, password };
+    try {
+      const res = await axios.post("http://localhost:8000/login", data);
+      localStorage.setItem("token", res.data.token);
+      navigate("/dashboard");
+    } catch (error) {
+      if (error.response.status === 422) {
+        setError(error.response.data.errors[0].message);
+      } else if (error.response.status === 400) {
+        setError(error.response.data.message);
+      }
+      console.log(error);
+    }
+    setLoading(false);
   };
 
   return (
@@ -31,21 +49,39 @@ const Login = () => {
           </div>
           <h5 className={`my-4 fw-bold ${styles.poppin}`}>Selamat Datang</h5>
           <form onSubmit={handleSubmit}>
+            {error && (
+              <div className="alert alert-danger" role="alert">
+                {error}
+              </div>
+            )}
             <div className={`mb-3`}>
               <h6 className={`fw-bold ${styles.poppin}`}>Login</h6>
-              <input required type="text" className={`form-control px-3 py-2 ${styles.poppin} ${styles.placeholder}`} placeholder="Email or phone number" />
+              <input required onChange={(e) => setUsername(e.target.value)} type="text" className={`form-control px-3 py-2 ${styles.poppin} ${styles.placeholder}`} placeholder="Username" />
             </div>
             <h6 className={`fw-bold ${styles.poppin}`}>Password</h6>
             <div className={`mb-3 input-group`}>
-              <input required type={isOpen ? "text" : "password"} className={`form-control px-3 py-2 ${styles.poppin} ${styles.placeholder}`} placeholder="Enter password" />
+              <input
+                required
+                onChange={(e) => setPassword(e.target.value)}
+                type={isOpen ? "text" : "password"}
+                className={`form-control px-3 py-2 ${styles.poppin} ${styles.placeholder}`}
+                placeholder="Enter password"
+              />
               <span onClick={toggle} className={`input-group-text ${styles.toggle}`} id="basic-addon2">
                 {isOpen ? <i className="fa-solid fa-eye-low-vision"></i> : <i className="fa-solid fa-eye"></i>}
               </span>
             </div>
             <div className="d-flex">
-              <button type="submit" className="flex-fill btn btn-primary">
-                Sign In
-              </button>
+              {loading ? (
+                <button disabled type="submit" className={`btn flex-fill ${styles["btn-more"]}`}>
+                  <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                  Signing In ...
+                </button>
+              ) : (
+                <button type="submit" className={`btn flex-fill ${styles["btn-more"]}`}>
+                  Sign In
+                </button>
+              )}
             </div>
           </form>
         </div>

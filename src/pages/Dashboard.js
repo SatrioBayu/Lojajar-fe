@@ -3,8 +3,27 @@ import styles from "../assets/css/Dashboard.module.css";
 import Sidebar from "../components/Sidebar";
 import Layer from "../assets/images/Rectangle 27.png";
 import Layer2 from "../assets/images/Rectangle 27-1.png";
+import { useEffect, useState } from "react";
+import axios from "axios";
 
 const Dashboard = () => {
+  const [berita, setBerita] = useState(0);
+  const [umkm, setUmkm] = useState(0);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const articleData = await axios.get("http://localhost:8000/article");
+        setBerita(articleData.data.data.length);
+        const umkmData = await axios.get("http://localhost:8000/umkm");
+        setUmkm(umkmData.data.data.length);
+      } catch (error) {
+        console.log(error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div>
       <AdminNavbar />
@@ -37,7 +56,7 @@ const Dashboard = () => {
                     </div>
                     <div class="col-lg-8">
                       <div class="card-body">
-                        <h4 class="card-title fw-bold">100</h4>
+                        <h4 class="card-title fw-bold">{berita}</h4>
                         <p class="card-text">Berita</p>
                       </div>
                     </div>
@@ -52,7 +71,7 @@ const Dashboard = () => {
                     </div>
                     <div class="col-lg-8">
                       <div class="card-body">
-                        <h4 class="card-title fw-bold">9</h4>
+                        <h4 class="card-title fw-bold">{umkm}</h4>
                         <p class="card-text">UMKM</p>
                       </div>
                     </div>

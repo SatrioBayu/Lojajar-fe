@@ -71,13 +71,7 @@ const Surat = () => {
 
                 {/* Keterangan */}
                 <h5>Keterangan</h5>
-                <textarea
-                  onChange={(e) => setKeterangan(e.target.value)}
-                  className="form-control my-4 p-3"
-                  rows="4"
-                  placeholder="Ingin membuat surat keterangan untuk menikah pada bulan september 2022"
-                  id="floatingTextarea"
-                ></textarea>
+                <textarea onChange={(e) => setKeterangan(e.target.value)} className="form-control my-4 p-3" rows="4" placeholder="Jawaban Anda" id="floatingTextarea"></textarea>
                 <button type="submit" className={`btn px-3 ${styles["btn-more"]}`}>
                   Kirim
                 </button>

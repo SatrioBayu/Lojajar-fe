@@ -19,7 +19,7 @@ const Sidebar = () => {
               <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
             </a>
             <div className="dropdown">
-              <CDBSidebarMenuItem icon="sticky-note">
+              <CDBSidebarMenuItem icon="newspaper">
                 <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Artikel
                 </p>
@@ -38,7 +38,7 @@ const Sidebar = () => {
               </CDBSidebarMenuItem>
             </div>
             <div className="dropdown">
-              <CDBSidebarMenuItem icon="chart-line" iconType="solid">
+              <CDBSidebarMenuItem icon="store" iconType="solid">
                 <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   UMKM
                 </p>

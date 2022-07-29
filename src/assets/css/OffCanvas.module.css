@@ -5,3 +5,19 @@
 .p{
     margin-bottom: 0;
 }
+.bg{
+    background-color: #ECEEF2 !important;
+}
+.link a{
+    color: black;
+}
+.link ul li{
+    padding: 2px;
+    list-style: none;
+}
+.link a:hover
+.link a:active
+.link a:visited
+{
+    color: #00A8FF;
+}

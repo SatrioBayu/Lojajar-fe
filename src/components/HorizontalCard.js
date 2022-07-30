@@ -1,4 +1,6 @@
 import styles from "../assets/css/HorizontalCard.module.css";
+import FB from "../assets/images/fb.png";
+import WA from "../assets/images/wa.png";
 
 const HorizontalCard = (props) => {
   return (
@@ -23,8 +25,12 @@ const HorizontalCard = (props) => {
                 <p className={styles.date}>Bagikan:</p>
               </div>
               <div className="col-sm-5">
-                <span className="fa-brands fa-facebook me-4"></span>
-                <span className="fa-brands fa-whatsapp"></span>
+                <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/berita/${props.data.id}`} target="_blank">
+                  <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
+                </a>
+                <a href={`https://api.whatsapp.com/send/?phone&text=${props.data.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/berita/${props.data.id}`} target="_blank">
+                  <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
+                </a>
               </div>
             </div>
             <p className="card-text">

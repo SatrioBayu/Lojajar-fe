@@ -15,8 +15,12 @@ const SideCard = (props) => {
               {props.data.jenis == "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{props.data.jenis}</p>}
             </div>
             <div className="d-flex justify-content-end col-6">
-              <img src={FB} className={`me-3 ${styles["card-icon"]}`} alt="fb" />
-              <img src={WA} className={`${styles["card-icon"]}`} alt="wa" />
+              <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/umkm/${props.data.id}`} target="_blank">
+                <img src={FB} className={`me-3 ${styles["card-icon"]}`} alt="fb" />
+              </a>
+              <a href={`https://api.whatsapp.com/send/?phone&text=${props.data.nama}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/umkm/${props.data.id}`} target="_blank">
+                <img src={WA} className={`${styles["card-icon"]}`} alt="wa" />
+              </a>
             </div>
           </div>
           <h5 className={`fw-bold ${styles["card-title"]}`}>{props.data.nama}</h5>

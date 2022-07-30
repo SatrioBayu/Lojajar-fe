@@ -35,7 +35,7 @@ const EditBerita = () => {
     formData.append("judul", judul);
     formData.append("isi", isi);
     try {
-      await axios.put(`http://localhost:8000/article/${id}`, formData, {
+      await axios.put(`https://lojajar-be.herokuapp.com/article/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

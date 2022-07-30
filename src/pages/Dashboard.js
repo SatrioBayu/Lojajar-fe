@@ -14,11 +14,11 @@ const Dashboard = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const articleData = await axios.get("http://localhost:8000/article");
+        const articleData = await axios.get("https://lojajar-be.herokuapp.com/article");
         setBerita(articleData.data.data.length);
-        const umkmData = await axios.get("http://localhost:8000/umkm");
+        const umkmData = await axios.get("https://lojajar-be.herokuapp.com/umkm");
         setUmkm(umkmData.data.data.length);
-        const suratData = await axios.get("http://localhost:8000/surat");
+        const suratData = await axios.get("https://lojajar-be.herokuapp.com/surat");
         setSurat(suratData.data.data.length);
       } catch (error) {
         console.log(error);

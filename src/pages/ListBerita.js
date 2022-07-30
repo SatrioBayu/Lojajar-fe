@@ -14,7 +14,7 @@ const ListBerita = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:8000/article");
+        const res = await axios.get("https://lojajar-be.herokuapp.com/article");
         setBerita(res.data.data);
       } catch (error) {
         setError("Terjadi kesalahan pada server");
@@ -27,7 +27,7 @@ const ListBerita = () => {
   const handleDelete = async (e) => {
     try {
       const id = e.target.value;
-      await axios.delete(`http://localhost:8000/article/${id}`, {
+      await axios.delete(`https://lojajar-be.herokuapp.com/article/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

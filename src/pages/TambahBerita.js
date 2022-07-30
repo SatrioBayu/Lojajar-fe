@@ -38,7 +38,7 @@ const TambahBerita = () => {
     formData.append("judul", judul);
     formData.append("isi", isi);
     try {
-      await axios.post("http://localhost:8000/article", formData, {
+      await axios.post("https://lojajar-be.herokuapp.com/article", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

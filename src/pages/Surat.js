@@ -33,7 +33,7 @@ const Surat = () => {
       keterangan,
     };
     try {
-      await axios.post("http://localhost:8000/surat", data);
+      await axios.post("https://lojajar-be.herokuapp.com/surat", data);
       swalButton
         .fire({
           title: "Permohonan Surat Berhasil Terkirim!",

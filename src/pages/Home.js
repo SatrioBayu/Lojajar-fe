@@ -18,8 +18,8 @@ const Home = () => {
 
   const fetchData = async () => {
     try {
-      const article = await (await axios.get("http://localhost:8000/article")).data;
-      const umkm = await (await axios.get("http://localhost:8000/umkm")).data;
+      const article = await (await axios.get("https://lojajar-be.herokuapp.com/article")).data;
+      const umkm = await (await axios.get("https://lojajar-be.herokuapp.com/umkm")).data;
       setArticles(article.data.slice(0, 6));
       setUmkm(umkm.data.slice(0, 6));
     } catch (error) {

@@ -16,13 +16,12 @@ const Login = () => {
   const toggle = () => {
     setIsOpen(!isOpen);
   };
-
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
     const data = { username, password };
     try {
-      const res = await axios.post("http://localhost:8000/login", data);
+      const res = await axios.post("https://lojajar-be.herokuapp.com/login", data);
       localStorage.setItem("token", res.data.token);
       navigate("/dashboard");
     } catch (error) {
@@ -30,8 +29,9 @@ const Login = () => {
         setError(error.response.data.errors[0].message);
       } else if (error.response.status === 400) {
         setError(error.response.data.message);
+      } else {
+        setError("Terjadi kesalahan pada server");
       }
-      setError("Terjadi kesalahan pada server");
     }
     setLoading(false);
   };

@@ -51,7 +51,7 @@ const EditUmkm = () => {
     formData.append("noHp", noHp);
     formData.append("jenis", choice);
     try {
-      await axios.put(`http://localhost:8000/umkm/${id}`, formData, {
+      await axios.put(`https://lojajar-be.herokuapp.com/umkm/${id}`, formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

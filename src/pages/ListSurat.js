@@ -14,7 +14,7 @@ const ListSurat = () => {
     const fetchData = async () => {
       setLoading(true);
       try {
-        const res = await axios.get("http://localhost:8000/surat");
+        const res = await axios.get("https://lojajar-be.herokuapp.com/surat");
         setSurat(res.data.data);
       } catch (error) {
         setError("Terjadi kesalahan pada server");
@@ -28,7 +28,7 @@ const ListSurat = () => {
     try {
       const id = e.target.value;
       const data = { status: "Selesai Diproses" };
-      await axios.put(`http://localhost:8000/surat/${id}`, data, {
+      await axios.put(`https://lojajar-be.herokuapp.com/surat/${id}`, data, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
@@ -87,7 +87,7 @@ const ListSurat = () => {
                     <tbody>
                       {loading ? (
                         <tr>
-                          <td colSpan="7" className="text-center p-3">
+                          <td colSpan="8" className="text-center p-3">
                             <div className="spinner-border" role="status">
                               <span className="sr-only">Loading...</span>
                             </div>
@@ -122,7 +122,7 @@ const ListSurat = () => {
                             </>
                           ) : (
                             <tr>
-                              <td colSpan="7" className="p-3 fw-bold text-center">
+                              <td colSpan="8" className="p-3 fw-bold text-center">
                                 Tidak ada surat permohonan
                               </td>
                             </tr>

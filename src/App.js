@@ -16,7 +16,6 @@ import ListUmkm from "./pages/ListUmkm";
 import EditBerita from "./pages/EditBerita";
 import EditUmkm from "./pages/EditUmkm";
 import ListSurat from "./pages/ListSurat";
-import UpdateSurat from "./pages/UpdateSurat";
 
 function App() {
   return (
@@ -96,14 +95,6 @@ function App() {
             </Protected>
           }
         />
-        {/* <Route
-          path="/editsurat/:id"
-          element={
-            <Protected>
-              <UpdateSurat />
-            </Protected>
-          }
-        /> */}
       </Routes>
     </BrowserRouter>
   );

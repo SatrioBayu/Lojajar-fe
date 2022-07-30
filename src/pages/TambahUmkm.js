@@ -57,7 +57,7 @@ const TambahUmkm = () => {
     formData.append("noHp", noHp);
     formData.append("jenis", choice);
     try {
-      await axios.post("http://localhost:8000/umkm", formData, {
+      await axios.post("https://lojajar-be.herokuapp.com/umkm", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

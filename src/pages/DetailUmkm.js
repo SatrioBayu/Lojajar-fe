@@ -23,7 +23,7 @@ const DetailUmkm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const umkm = await (await axios.get(`http://localhost:8000/umkm/${id}`)).data;
+        const umkm = await (await axios.get(`https://lojajar-be.herokuapp.com/umkm/${id}`)).data;
         setUmkm(umkm.data);
         setLoading(false);
       } catch (error) {

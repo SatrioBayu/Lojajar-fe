@@ -13,7 +13,7 @@ const ListUmkm = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const umkmData = await axios.get("http://localhost:8000/umkm");
+        const umkmData = await axios.get("https://lojajar-be.herokuapp.com/umkm");
         setUmkm(umkmData.data.data);
       } catch (error) {
         setError("Terjadi kesalahan pada server");
@@ -25,7 +25,7 @@ const ListUmkm = () => {
   const handleDelete = async (e) => {
     try {
       const id = e.target.value;
-      await axios.delete(`http://localhost:8000/umkm/${id}`, {
+      await axios.delete(`https://lojajar-be.herokuapp.com/umkm/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },

@@ -16,7 +16,7 @@ const Berita = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const berita = await (await axios.get("http://localhost:8000/article")).data;
+        const berita = await (await axios.get("https://lojajar-be.herokuapp.com/article")).data;
         setBerita(berita.data);
         setLoading(false);
       } catch (error) {

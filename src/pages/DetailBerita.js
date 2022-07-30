@@ -27,7 +27,7 @@ const DetailBerita = () => {
 
   const fetchData = async () => {
     try {
-      const article = await (await axios.get(`http://localhost:8000/article/${id}`)).data;
+      const article = await (await axios.get(`https://lojajar-be.herokuapp.com/article/${id}`)).data;
       setArticle(article.data);
       setTanggal(new Date(article.data.updatedAt).getDate());
       setBulan(month[new Date(article.data.updatedAt).getMonth()]);

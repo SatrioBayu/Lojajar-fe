@@ -72,31 +72,41 @@ const ListUmkm = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {umkm.map((item, index) => (
-                        <tr key={item.id} className="text-center">
-                          <td scope="row">{index + 1}</td>
-                          <td>{item.nama}</td>
-                          <td>{item.jenis}</td>
-                          <td>
-                            <img src={item.UmkmImages[0].image} className={`img-fluid`} alt="" />
-                          </td>
-                          <td>
-                            <a href={`/editumkm/${item.id}`} className="btn btn-primary">
-                              Edit
-                            </a>
-                          </td>
-                          <td>
-                            <button value={item.id} onClick={handleDelete} className="btn btn-danger">
-                              Hapus
-                            </button>
-                          </td>
-                          <td>
-                            <a href={`/umkm/${item.id}`} className="btn btn-success">
-                              Lihat
-                            </a>
+                      {umkm.length > 0 ? (
+                        <>
+                          {umkm.map((item, index) => (
+                            <tr key={item.id} className="text-center">
+                              <td scope="row">{index + 1}</td>
+                              <td>{item.nama}</td>
+                              <td>{item.jenis}</td>
+                              <td>
+                                <img src={item.UmkmImages[0].image} className={`img-fluid`} alt="" />
+                              </td>
+                              <td>
+                                <a href={`/editumkm/${item.id}`} className="btn btn-primary">
+                                  Edit
+                                </a>
+                              </td>
+                              <td>
+                                <button value={item.id} onClick={handleDelete} className="btn btn-danger">
+                                  Hapus
+                                </button>
+                              </td>
+                              <td>
+                                <a href={`/umkm/${item.id}`} className="btn btn-success">
+                                  Lihat
+                                </a>
+                              </td>
+                            </tr>
+                          ))}
+                        </>
+                      ) : (
+                        <tr>
+                          <td colSpan="7" className="p-3 fw-bold text-center">
+                            Tidak ada UMKM
                           </td>
                         </tr>
-                      ))}
+                      )}
                     </tbody>
                   </table>
                 </div>

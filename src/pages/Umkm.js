@@ -16,7 +16,6 @@ const Umkm = () => {
       try {
         const umkm = await (await axios.get("http://localhost:8000/umkm")).data;
         setUmkm(umkm.data);
-        console.log(umkm.data);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -33,7 +32,7 @@ const Umkm = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">UMKM Desa</h3>
         <p className="text-center mb-5">Usaha Mikro Kecil Menengah yang ada di Desa Lojajar</p>
-        <div className="row gx-5 my-5">
+        <div className="row gx-5 gy-4 my-5">
           {loading ? (
             <div className="col-lg-8 d-flex justify-content-center">
               <div className="spinner-border" role="status">

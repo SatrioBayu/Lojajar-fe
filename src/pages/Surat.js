@@ -32,21 +32,33 @@ const Surat = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">Permohonan Surat Online</h3>
         <p className={`text-center mb-5 ${styles.subtitle}`}>Ajukan pembuatan surat administrasi secara online disini</p>
-        <div className="row gx-5 my-4">
+        <div className="row gx-5 gy-4 my-4">
           <div className="col-lg-8">
             <div className={`${styles["surat-container"]}`}>
               <form onSubmit={handleSubmit} className="p-4">
                 {/* Nama */}
-                <h5 className="mb-3">Nama</h5>
-                <input size={50} required onChange={(e) => setNama(e.target.value)} type="text" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                <div className="row">
+                  <h5 className="mb-3">Nama</h5>
+                  <div className="col-md-6 d-flex">
+                    <input required onChange={(e) => setNama(e.target.value)} type="text" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                  </div>
+                </div>
 
                 {/* NIK */}
-                <h5 className="mb-3">NIK</h5>
-                <input size={50} required onChange={(e) => setNik(e.target.value)} type="text" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                <div className="row">
+                  <h5 className="mb-3">NIK</h5>
+                  <div className="col-md-6 d-flex">
+                    <input required onChange={(e) => setNik(e.target.value)} type="text" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                  </div>
+                </div>
 
                 {/* Email */}
-                <h5 className="mb-3">Email</h5>
-                <input size={50} required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                <div className="row">
+                  <h5 className="mb-3">Email</h5>
+                  <div className="col-md-6 d-flex">
+                    <input required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                  </div>
+                </div>
 
                 {/* Jenis Surat */}
                 <h5 className="mb-3">Pilih Jenis Surat</h5>

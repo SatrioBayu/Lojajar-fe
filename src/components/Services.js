@@ -2,7 +2,7 @@ import styles from "../assets/css/Contact.module.css";
 
 const Services = () => {
   return (
-    <section className="page-section" id="services">
+    <section className="py-5" id="services">
       <div className="container px-4 px-lg-5">
         <h2 className="text-center mt-0">Data Desa</h2>
         <hr className={styles["divider-custom"]} />

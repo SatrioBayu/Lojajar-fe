@@ -9,7 +9,7 @@ const Article = (props) => {
       <hr className={styles["divider-custom"]} />
 
       <div className="mt-5 container">
-        <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 g-4">
+        <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4">
           {props.data.map((item) => (
             <div className="col" key={item.id}>
               <div className="card h-100">
@@ -26,7 +26,7 @@ const Article = (props) => {
                   </div>
                   <hr />
                   <h5 className={`${styles["card-title"]}`}>{item.judul}</h5>
-                  <p className={`${styles["card-text"]} mb-3`}>This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                  <p className={`${styles["card-text"]} mb-3`}>{item.isi.slice(0, 129)}</p>
                   <a className={`${styles["card-link"]}`} href={`/berita/${item.id}`}>
                     Baca Selengkapnya
                   </a>

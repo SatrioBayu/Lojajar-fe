@@ -3,7 +3,7 @@ import bgstyles from "../assets/css/Background.module.css";
 
 const Gmaps = () => {
   return (
-    <section className={`page-section ${bgstyles["bg-primary"]}`} id="peta">
+    <section className={`py-5 ${bgstyles["bg-primary"]}`} id="peta">
       <h2 className="dataDesa">Peta Desa</h2>
       <hr className={styles["divider-custom"]} />
       <div id="map-container-google-1" className="mt-5 z-depth-1-half map-container" style={{ height: "500px" }}>

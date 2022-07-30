@@ -3,7 +3,7 @@ import styles from "../assets/css/HorizontalCard.module.css";
 const HorizontalCard = (props) => {
   return (
     <div className={`card mb-3 ${styles["card-horizontal"]}`}>
-      <div className="row justify-content-center align-items-center g-2">
+      <div className="row mt-4 justify-content-center align-items-center g-2">
         <div className="col-lg-4 d-flex justify-content-center">
           <img src={props.data.ArticleImages[0].image} className={`rounded img-fluid`} alt="..." />
         </div>

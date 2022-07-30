@@ -16,7 +16,6 @@ const Berita = () => {
       try {
         const berita = await (await axios.get("http://localhost:8000/article")).data;
         setBerita(berita.data);
-        console.log(berita.data);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -33,7 +32,7 @@ const Berita = () => {
       <div className={`container ${styles.content}`}>
         <h3 className="text-center">Berita Desa</h3>
         <p className="text-center mb-5">Berita terkini seputar kejadian dan kegiatan di Desa Lojajar</p>
-        <div className="row gx-5 my-5">
+        <div className="row gx-5 gy-4 my-5">
           {loading ? (
             <div className="col-lg-8 d-flex justify-content-center">
               <div className="spinner-border" role="status">
@@ -51,7 +50,10 @@ const Berita = () => {
                   {berita.length > 0 ? (
                     <div className="col-lg-8">
                       {berita.map((item) => (
-                        <HorizontalCard key={item.id} data={item} />
+                        <>
+                          <hr />
+                          <HorizontalCard key={item.id} data={item} />
+                        </>
                       ))}
                     </div>
                   ) : (

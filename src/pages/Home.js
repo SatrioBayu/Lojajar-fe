@@ -20,8 +20,6 @@ const Home = () => {
     try {
       const article = await (await axios.get("http://localhost:8000/article")).data;
       const umkm = await (await axios.get("http://localhost:8000/umkm")).data;
-      console.log(article);
-      console.log(umkm);
       setArticles(article.data.slice(0, 6));
       setUmkm(umkm.data.slice(0, 6));
     } catch (error) {

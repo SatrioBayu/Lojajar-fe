@@ -5,18 +5,21 @@ import axios from "axios";
 import { useState, useEffect } from "react";
 
 const ListBerita = () => {
+  const [loading, setLoading] = useState(false);
   const [berita, setBerita] = useState([]);
   const [error, setError] = useState("");
   const [errorDelete, setErrorDelete] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
+      setLoading(true);
       try {
         const res = await axios.get("http://localhost:8000/article");
         setBerita(res.data.data);
       } catch (error) {
         setError("Terjadi kesalahan pada server");
       }
+      setLoading(false);
     };
     fetchData();
   }, []);
@@ -72,31 +75,53 @@ const ListBerita = () => {
                       </tr>
                     </thead>
                     <tbody>
-                      {berita.map((item, index) => (
-                        <tr key={item.id} className="text-center">
-                          <td scope="row">{index + 1}</td>
-                          <td>{item.judul}</td>
-                          <td>27 Mei 2022</td>
-                          <td>
-                            <img src={item.ArticleImages[0].image} className={`img-fluid`} alt="" />
-                          </td>
-                          <td>
-                            <a href={`/editberita/${item.id}`} className="btn btn-primary">
-                              Edit
-                            </a>
-                          </td>
-                          <td>
-                            <button value={item.id} onClick={handleDelete} className="btn btn-danger">
-                              Hapus
-                            </button>
-                          </td>
-                          <td>
-                            <a href={`/berita/${item.id}`} className="btn btn-success">
-                              Lihat
-                            </a>
+                      {loading ? (
+                        <tr>
+                          <td colSpan="7" className="text-center p-3">
+                            <div className="spinner-border" role="status">
+                              <span className="sr-only">Loading...</span>
+                            </div>
                           </td>
                         </tr>
-                      ))}
+                      ) : (
+                        <>
+                          {berita.length > 0 ? (
+                            <>
+                              {berita.map((item, index) => (
+                                <tr key={item.id} className="text-center">
+                                  <td scope="row">{index + 1}</td>
+                                  <td>{item.judul}</td>
+                                  <td>27 Mei 2022</td>
+                                  <td>
+                                    <img src={item.ArticleImages[0].image} className={`img-fluid`} alt="" />
+                                  </td>
+                                  <td>
+                                    <a href={`/editberita/${item.id}`} className="btn btn-primary">
+                                      Edit
+                                    </a>
+                                  </td>
+                                  <td>
+                                    <button value={item.id} onClick={handleDelete} className="btn btn-danger">
+                                      Hapus
+                                    </button>
+                                  </td>
+                                  <td>
+                                    <a href={`/berita/${item.id}`} className="btn btn-success">
+                                      Lihat
+                                    </a>
+                                  </td>
+                                </tr>
+                              ))}
+                            </>
+                          ) : (
+                            <tr>
+                              <td colSpan="7" className="p-3 fw-bold text-center">
+                                Tidak ada berita
+                              </td>
+                            </tr>
+                          )}
+                        </>
+                      )}
                     </tbody>
                   </table>
                 </div>

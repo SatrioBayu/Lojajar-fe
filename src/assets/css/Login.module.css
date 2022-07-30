@@ -5,7 +5,7 @@
     font-family: 'Poppins', sans-serif;
 }
 .no-padding{
-    padding-right: 0;
+    padding-right: 0 !important;
 }
 .toggle{
     cursor: pointer;

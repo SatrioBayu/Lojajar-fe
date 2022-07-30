@@ -6,10 +6,13 @@ import SideMap from "../components/SideMap";
 import FB from "../assets/images/fb.png";
 import WA from "../assets/images/wa.png";
 import { useState, useEffect } from "react";
+import { useLocation } from "react-router-dom";
 import axios from "axios";
 
 const DetailBerita = () => {
   const { id } = useParams();
+  const location = useLocation();
+  console.log(location);
   const [loading, setLoading] = useState(true);
   const [article, setArticle] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
@@ -58,7 +61,10 @@ const DetailBerita = () => {
                     <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsecondhand-seven.vercel.app/" target="_blank">
                       <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
                     </a>
-                    <a href="https://api.whatsapp.com/send/?phone&text=Coba sajo hehe" target="_blank">
+                    <a
+                      href={`https://api.whatsapp.com/send/?phone&text=${article.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Fsecondhand-seven.vercel.app/productDetails/2`}
+                      target="_blank"
+                    >
                       <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
                     </a>
                     <a onClick={copyLink} className={`badge ${styles["card-tag"]}`}>
@@ -67,35 +73,8 @@ const DetailBerita = () => {
                   </div>
                 </div>
                 <img src={article.ArticleImages[0].image} className={`${styles.image}`} alt="article" />
-                <p className={`mt-4 ${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima corporis ullam nihil voluptatibus voluptates, suscipit optio odit maxime ut molestiae ipsam? Vero adipisci rerum
-                  asperiores! Exercitationem illo reiciendis at nesciunt?
-                </p>
+                <p className={`mt-4 ${styles.secondary}`}>{article.isi}</p>
                 <br />
-                <p className={`${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore accusantium provident similique cupiditate, corrupti ullam ipsam, sed non tempora autem deserunt
-                  reprehenderit! Quisquam voluptatum ut sequi delectus dignissimos porro?
-                </p>
-                <br />
-                <p className={`${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi aliquam laboriosam quia commodi! Dolorum, dolores architecto consequuntur in, ullam quia deserunt expedita modi
-                  adipisci similique reiciendis dicta quam! Consequatur.
-                </p>
-                <br />
-                <p className={`${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur, adipisicing elit. Minima corporis ullam nihil voluptatibus voluptates, suscipit optio odit maxime ut molestiae ipsam? Vero adipisci rerum
-                  asperiores! Exercitationem illo reiciendis at nesciunt?
-                </p>
-                <br />
-                <p className={`${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda tempore accusantium provident similique cupiditate, corrupti ullam ipsam, sed non tempora autem deserunt
-                  reprehenderit! Quisquam voluptatum ut sequi delectus dignissimos porro?
-                </p>
-                <br />
-                <p className={`${styles.secondary}`}>
-                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe modi aliquam laboriosam quia commodi! Dolorum, dolores architecto consequuntur in, ullam quia deserunt expedita modi
-                  adipisci similique reiciendis dicta quam! Consequatur.
-                </p>
               </div>
               <SideMap />
             </div>
@@ -106,5 +85,4 @@ const DetailBerita = () => {
     </div>
   );
 };
-
 export default DetailBerita;

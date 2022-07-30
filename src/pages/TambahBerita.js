@@ -45,7 +45,11 @@ const TambahBerita = () => {
       navigate("/listberita");
     } catch (error) {
       console.log(error);
-      setError("Terjadi kesalahan pada server");
+      if (error.response.status == 500) {
+        setError("Isi berita terlalu panjang. Maximum 1000 karakter");
+      } else {
+        setError("Terjadi kesalahan pada server");
+      }
     }
     setLoading(false);
   };

@@ -1,4 +1,5 @@
 import { Navigate } from "react-router-dom";
+import axios from "axios";
 
 const Protected = ({ children }) => {
   const token = localStorage.getItem("token");

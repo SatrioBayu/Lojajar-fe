@@ -56,7 +56,7 @@ const DetailUmkm = () => {
                       </div>
                       <div className="col-md-4">
                         {umkm.UmkmImages.map((image, index) => (
-                          <>{index !== 0 && <img className={`mb-2 ${styles.img}`} src={image.image} alt="" />}</>
+                          <>{index !== 0 && <img className={`${index === 1 ? "mb-1" : ""} ${styles.img}`} src={image.image} alt="" />}</>
                         ))}
                       </div>
                     </>
@@ -90,18 +90,7 @@ const DetailUmkm = () => {
                   <hr />
                   <h6 className="mt-3 fw-bold">Deskripsi</h6>
                   <div className={styles.deskripsi}>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, eos dolorum magnam impedit repellendus reiciendis perspiciatis nam dicta tempora assumenda facilis culpa veritatis
-                      excepturi nemo sunt maiores? Quis, dolor cum.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam, soluta quae. Aut, consectetur, explicabo ipsam ratione a laborum vitae quibusdam minus distinctio repellat cumque
-                      recusandae officia fugit facilis. Dolorem, id.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Iure natus molestiae, praesentium minus possimus corrupti illum sequi, vitae vel facere doloribus exercitationem velit
-                      cumque autem, id similique perspiciatis quam veritatis?
-                    </p>
+                    <p>{umkm.deskripsi}</p>
                   </div>
                 </div>
               </div>

@@ -5,7 +5,7 @@ import OffCanvas from "./OffCanvas";
 
 const AdminNavbar = () => {
   return (
-    <nav className="navbar navbar-expand-sm navbar-light py-3" id="mainNav">
+    <nav className="navbar navbar-expand-md navbar-light py-3" id="mainNav">
       <div className="container-fluid px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
         <NavLink className="navbar-brand" to="/">

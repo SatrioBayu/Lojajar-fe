@@ -31,7 +31,7 @@ const Login = () => {
       } else if (error.response.status === 400) {
         setError(error.response.data.message);
       }
-      console.log(error);
+      setError("Terjadi kesalahan pada server");
     }
     setLoading(false);
   };

@@ -1,21 +1,24 @@
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import styles from "../assets/css/DetailBerita.module.css";
 import SideMap from "../components/SideMap";
 import FB from "../assets/images/fb.png";
 import WA from "../assets/images/wa.png";
 import { useState, useEffect } from "react";
-import { useLocation } from "react-router-dom";
 import axios from "axios";
+
+const month = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
 
 const DetailBerita = () => {
   const { id } = useParams();
-  const location = useLocation();
-  console.log(location);
   const [loading, setLoading] = useState(true);
   const [article, setArticle] = useState(null);
+  const [tanggal, setTanggal] = useState(null);
+  const [bulan, setBulan] = useState(null);
+  const [tahun, setTahun] = useState(null);
   const [isCopied, setIsCopied] = useState(false);
+  const navigate = useNavigate();
 
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -26,10 +29,13 @@ const DetailBerita = () => {
     try {
       const article = await (await axios.get(`http://localhost:8000/article/${id}`)).data;
       setArticle(article.data);
-      console.log(article);
+      setTanggal(new Date(article.data.updatedAt).getDate());
+      setBulan(month[new Date(article.data.updatedAt).getMonth()]);
+      setTahun(new Date(article.data.updatedAt).getFullYear());
       setLoading(false);
     } catch (error) {
       console.log(error);
+      navigate("/");
     }
   };
 
@@ -53,7 +59,7 @@ const DetailBerita = () => {
               <h4 className="fw-bold">{article.judul}</h4>
               <div className="row g-2 align-items-center">
                 <div className="col-sm-6">
-                  <p className={`${styles.secondary}`}>27 Juli 2022</p>
+                  <p className={`${styles.secondary}`}>{`${tanggal} ${bulan} ${tahun}`}</p>
                   <p className={`mt-1 mb-3`}>Penulis : {article.User.username}</p>
                 </div>
                 <div className="col-sm-6 d-flex justify-content-end">

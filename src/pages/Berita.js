@@ -6,6 +6,8 @@ import HorizontalCard from "../components/HorizontalCard";
 import { useState, useEffect } from "react";
 import axios from "axios";
 
+const month = ["Januari", "Februari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+
 const Berita = () => {
   const [loading, setLoading] = useState(true);
   const [berita, setBerita] = useState(null);
@@ -50,10 +52,13 @@ const Berita = () => {
                   {berita.length > 0 ? (
                     <div className="col-lg-8">
                       {berita.map((item) => (
-                        <>
-                          <hr />
-                          <HorizontalCard key={item.id} data={item} />
-                        </>
+                        <HorizontalCard
+                          key={item.id}
+                          tanggal={new Date(item.updatedAt).getDate()}
+                          bulan={month[new Date(item.updatedAt).getMonth()]}
+                          tahun={new Date(item.updatedAt).getFullYear()}
+                          data={item}
+                        />
                       ))}
                     </div>
                   ) : (

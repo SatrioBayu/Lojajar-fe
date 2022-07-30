@@ -1,7 +1,7 @@
 import styles from "../assets/css/DetailUmkm.module.css";
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import SideMap from "../components/SideMap";
 import FB from "../assets/images/fb.png";
 import WA from "../assets/images/wa.png";
@@ -13,6 +13,7 @@ const DetailUmkm = () => {
   const [loading, setLoading] = useState(true);
   const [isCopied, setIsCopied] = useState(false);
   const [umkm, setUmkm] = useState(null);
+  const navigate = useNavigate();
 
   const copyLink = () => {
     navigator.clipboard.writeText(window.location.href);
@@ -28,6 +29,7 @@ const DetailUmkm = () => {
         setLoading(false);
       } catch (error) {
         console.log(error);
+        navigate("/");
       }
     };
     fetchData();

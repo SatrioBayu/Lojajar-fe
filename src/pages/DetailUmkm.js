@@ -25,7 +25,6 @@ const DetailUmkm = () => {
       try {
         const umkm = await (await axios.get(`http://localhost:8000/umkm/${id}`)).data;
         setUmkm(umkm.data);
-        console.log(umkm);
         setLoading(false);
       } catch (error) {
         console.log(error);
@@ -57,7 +56,7 @@ const DetailUmkm = () => {
                     </div>
                     <div className="col-md-4">
                       {umkm.UmkmImages.map((image, index) => (
-                        <>{index !== 0 && <img className={`${index === 1 ? "mb-1" : ""} ${styles.img}`} src={image.image} alt="" />}</>
+                        <div key={image.id}>{index !== 0 && <img className={`${index === 1 ? "mb-1" : ""} ${styles.img}`} src={image.image} alt="" />}</div>
                       ))}
                     </div>
                   </>

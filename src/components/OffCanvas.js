@@ -14,46 +14,51 @@ const OffCanvas = () => {
         <ul className="nav flex-column">
           <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard">
-              Dashboard
+              <i class="fa-solid fa-table-columns"></i> &nbsp; Dashboard
             </NavLink>
           </li>
           <li className="nav-item">
             <a className={`nav-link dropdown-toggle ${styles.p}`} data-bs-toggle="collapse" href="#collapseArtikel" type="button">
-              Artikel
+              <i class="fa-solid fa-newspaper"></i> &nbsp; Artikel
             </a>
-            <ul className="collapse" id="collapseArtikel">
+            <ul className={`collapse ${styles["collapse-link"]}`} id="collapseArtikel">
               <li>
                 <a className="dropdown-item" href="/tambahberita">
-                  Tambah Berita
+                  <i class="fa-solid fa-plus"></i> &nbsp; Tambah Berita
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="/listberita">
-                  List Berita
+                  <i class="fa-solid fa-list"></i> &nbsp; List Berita
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item">
             <a className={`nav-link dropdown-toggle ${styles.p}`} data-bs-toggle="collapse" href="#collapseUMKM" type="button">
-              UMKM
+              <i class="fa-solid fa-store"></i> &nbsp; UMKM
             </a>
-            <ul className="collapse" id="collapseUMKM">
+            <ul className={`collapse ${styles["collapse-link"]}`} id="collapseUMKM">
               <li>
                 <a className="dropdown-item" href="/tambahumkm">
-                  Tambah UMKM
+                  <i class="fa-solid fa-plus"></i> &nbsp; Tambah UMKM
                 </a>
               </li>
               <li>
                 <a className="dropdown-item" href="/listumkm">
-                  List UMKM
+                  <i class="fa-solid fa-list"></i> &nbsp; List UMKM
                 </a>
               </li>
             </ul>
           </li>
           <li className="nav-item">
+            <a className="nav-link" href="/listsurat">
+              <i class="fa-solid fa-envelope"></i> &nbsp; Surat Permohonan
+            </a>
+          </li>
+          <li className="nav-item">
             <NavLink className="nav-link" to="/dashboard">
-              Sign Out
+              <i class="fa-solid fa-right-from-bracket"></i> &nbsp; Sign Out
             </NavLink>
           </li>
         </ul>

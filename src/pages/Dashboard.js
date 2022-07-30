@@ -9,6 +9,7 @@ import axios from "axios";
 const Dashboard = () => {
   const [berita, setBerita] = useState(0);
   const [umkm, setUmkm] = useState(0);
+  const [surat, setSurat] = useState(0);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -17,6 +18,8 @@ const Dashboard = () => {
         setBerita(articleData.data.data.length);
         const umkmData = await axios.get("http://localhost:8000/umkm");
         setUmkm(umkmData.data.data.length);
+        const suratData = await axios.get("http://localhost:8000/surat");
+        setSurat(suratData.data.data.length);
       } catch (error) {
         console.log(error);
       }
@@ -33,7 +36,7 @@ const Dashboard = () => {
           <div className="container">
             <h3>Dashboard</h3>
             <div className="row g-3">
-              <div className="col-sm-4">
+              <div className="col-sm-3">
                 <div className="card h-100 mb-3 p-3">
                   <div className="row align-items-center g-0">
                     <div className="col-lg-4 d-flex justify-content-center">
@@ -48,7 +51,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4">
+              <div className="col-sm-3">
                 <div className="card h-100 mb-3 p-3">
                   <div className="row align-items-center g-0">
                     <div className="col-lg-4 d-flex justify-content-center">
@@ -63,7 +66,7 @@ const Dashboard = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-sm-4">
+              <div className="col-sm-3">
                 <div className="card h-100 mb-3 p-3">
                   <div className="row align-items-center g-0">
                     <div className="col-lg-4 d-flex justify-content-center">
@@ -73,6 +76,21 @@ const Dashboard = () => {
                       <div className="card-body">
                         <h4 className="card-title fw-bold">{umkm}</h4>
                         <p className="card-text">UMKM</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div className="col-sm-3">
+                <div className="card h-100 mb-3 p-3">
+                  <div className="row align-items-center g-0">
+                    <div className="col-lg-4 d-flex justify-content-center">
+                      <img src={Layer} className="img-fluid rounded-start" alt="image" />
+                    </div>
+                    <div className="col-lg-8">
+                      <div className="card-body">
+                        <h4 className="card-title fw-bold">{surat}</h4>
+                        <p className="card-text">Pengajuan</p>
                       </div>
                     </div>
                   </div>

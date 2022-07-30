@@ -15,9 +15,11 @@
     padding: 2px;
     list-style: none;
 }
+.collapse-link a:hover
+{
+    color: #00A8FF;
+}
 .link a:hover
-.link a:active
-.link a:visited
 {
     color: #00A8FF;
 }

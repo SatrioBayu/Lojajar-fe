@@ -38,9 +38,7 @@ const HorizontalCard = (props) => {
                   </a>
                 </div>
               </div>
-              <p className="card-text">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maeet, quis adipiscing tellus neque turpis. Vestibulum sed ut amet, pharetra tellus augue sed ut quisque. Sed condimentum sit
-              </p>
+              <p className="card-text">{props.data.isi.slice(0, 129)}</p>
             </div>
           </div>
         </div>

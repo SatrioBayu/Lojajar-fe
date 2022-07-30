@@ -68,9 +68,9 @@ const DetailUmkm = () => {
                 </div>
                 {/* Tag */}
                 <div className="my-4 g-2 d-flex align-items-center flex-wrap">
-                  {umkm.jenis == "Makanan" && <p className={`badge ${styles["card-tag--makanan"]}`}>{umkm.jenis}</p>}
-                  {umkm.jenis == "Barang" && <p className={`badge ${styles["card-tag--barang"]}`}>{umkm.jenis}</p>}
-                  {umkm.jenis == "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{umkm.jenis}</p>}
+                  {umkm.jenis === "Makanan" && <p className={`badge ${styles["card-tag--makanan"]}`}>{umkm.jenis}</p>}
+                  {umkm.jenis === "Barang" && <p className={`badge ${styles["card-tag--barang"]}`}>{umkm.jenis}</p>}
+                  {umkm.jenis === "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{umkm.jenis}</p>}
                   <p className={`badge me-auto ${styles["card-tag"]}`}>{umkm.jenis}</p>
                   <a href="https://www.facebook.com/sharer.php?u=https%3A%2F%2Fsecondhand-seven.vercel.app/" target="_blank">
                     <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />

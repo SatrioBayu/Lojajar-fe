@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import { useState, useEffect } from "react";
 import axios from "axios";
 import { useParams, useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditBerita = () => {
   const { id } = useParams();
@@ -12,6 +13,7 @@ const EditBerita = () => {
   const [judul, setJudul] = useState("");
   const [isi, setIsi] = useState("");
   const [loading, setLoading] = useState(false);
+  const [error, setError] = useState("");
   const navigate = useNavigate();
 
   const handleUploadImage = (e) => {
@@ -38,9 +40,31 @@ const EditBerita = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      navigate("/listberita");
+      Swal.fire({
+        icon: "success",
+        title: "Berita berhasil diubah",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/listberita");
+        }
+      });
     } catch (error) {
       console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi kesalahan saat mengubah berita",
+      });
+      if (error.response.status == 422) {
+        setError(error.response.data.errors[0].message);
+      } else if (error.response.status === 400) {
+        setError(error.response.data.message);
+      } else if (error.response.status === 500) {
+        setError("Isi berita terlalu panjang. Maximum 1000 karakter");
+      } else {
+        setError("Terjadi kesalahan pada server");
+      }
     }
     setLoading(false);
   };
@@ -70,6 +94,11 @@ const EditBerita = () => {
             <p>Anda dapat menambah berita terkini</p>
 
             <form onSubmit={handleSubmit} className={`${styles.form}`}>
+              {error && (
+                <div className="alert alert-danger" role="alert">
+                  {error}
+                </div>
+              )}
               <div className="mb-4">
                 <h5>Gambar Berita</h5>
                 {imagePreview && <img src={imagePreview} className={`img-thumbnail ${styles.preview}`} alt="thumbnail" />}

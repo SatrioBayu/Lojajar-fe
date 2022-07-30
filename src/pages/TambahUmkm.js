@@ -4,6 +4,7 @@ import AdminNavbar from "../components/AdminNavbar";
 import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const TambahUmkm = () => {
   const [loading, setLoading] = useState(false);
@@ -61,8 +62,21 @@ const TambahUmkm = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      navigate("/listumkm");
+      Swal.fire({
+        icon: "success",
+        title: "Berita berhasil ditambahkan",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/listumkm");
+        }
+      });
     } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi Kesalahan pada server",
+      });
       if (error.response.status === 422) {
         setError(error.response.data.errors[0].message);
       } else if (error.response.status === 400) {

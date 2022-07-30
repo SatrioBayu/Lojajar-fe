@@ -18,7 +18,7 @@ const Sidebar = () => {
             <a href="/dashboard">
               <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
             </a>
-            <div className="dropdown">
+            <a className="dropdown">
               <CDBSidebarMenuItem icon="newspaper">
                 <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   Artikel
@@ -36,8 +36,8 @@ const Sidebar = () => {
                   </li>
                 </ul>
               </CDBSidebarMenuItem>
-            </div>
-            <div className="dropdown">
+            </a>
+            <a className="dropdown">
               <CDBSidebarMenuItem icon="store" iconType="solid">
                 <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
                   UMKM
@@ -55,7 +55,7 @@ const Sidebar = () => {
                   </li>
                 </ul>
               </CDBSidebarMenuItem>
-            </div>
+            </a>
             <CDBSidebarMenuItem>Akun</CDBSidebarMenuItem>
             <a href="#" onClick={handleLogout}>
               <CDBSidebarMenuItem icon="sign-out-alt" className="text">

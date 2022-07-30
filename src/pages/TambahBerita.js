@@ -4,6 +4,7 @@ import Sidebar from "../components/Sidebar";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const TambahBerita = () => {
   const [image, setImage] = useState(null);
@@ -42,9 +43,21 @@ const TambahBerita = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      navigate("/listberita");
+      Swal.fire({
+        icon: "success",
+        title: "Berita berhasil ditambahkan",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/listberita");
+        }
+      });
     } catch (error) {
-      console.log(error);
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi Kesalahan pada server",
+      });
       if (error.response.status == 500) {
         setError("Isi berita terlalu panjang. Maximum 1000 karakter");
       } else {

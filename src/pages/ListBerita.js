@@ -3,12 +3,12 @@ import AdminNavbar from "../components/AdminNavbar";
 import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import { useState, useEffect } from "react";
+import Swal from "sweetalert2";
 
 const ListBerita = () => {
   const [loading, setLoading] = useState(false);
   const [berita, setBerita] = useState([]);
   const [error, setError] = useState("");
-  const [errorDelete, setErrorDelete] = useState("");
 
   useEffect(() => {
     const fetchData = async () => {
@@ -32,9 +32,21 @@ const ListBerita = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      window.location.reload();
+      Swal.fire({
+        icon: "success",
+        title: "Berita berhasil dihapus",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.reload();
+        }
+      });
     } catch (error) {
-      setErrorDelete("Terjadi kesalahan pada server");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi kesalahan, silahkan coba lagi",
+      });
     }
   };
 
@@ -47,11 +59,6 @@ const ListBerita = () => {
           <div className="container">
             <h3>List Berita</h3>
             <p>Anda dapat mengedit dan menghapus Berita yang telah di post pada halaman Tambah Berita</p>
-            {errorDelete && (
-              <div className="alert alert-danger" role="alert">
-                {errorDelete}
-              </div>
-            )}
             {error ? (
               <div className="alert alert-danger" role="alert">
                 {error}

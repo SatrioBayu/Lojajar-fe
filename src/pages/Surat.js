@@ -5,16 +5,25 @@ import SideMap from "../components/SideMap";
 import { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
-import Modal from "../components/Modal";
+import Swal from "sweetalert2";
 
 const Surat = () => {
+  const [loading, setLoading] = useState(false);
   const [nama, setNama] = useState("");
   const [nik, setNik] = useState("");
   const [email, setEmail] = useState("");
   const [jenisSurat, setJenisSurat] = useState("");
-  const [keterangan, setKeterangan] = useState("");
+  const [keterangan, setKeterangan] = useState(null);
+  const navigate = useNavigate();
+  const swalButton = Swal.mixin({
+    customClass: {
+      confirmButton: `btn ${styles["btn-more"]}`,
+    },
+    buttonsStyling: false,
+  });
 
   const handleSubmit = async (e) => {
+    setLoading(true);
     e.preventDefault();
     const data = {
       nama,
@@ -23,7 +32,29 @@ const Surat = () => {
       jenis: jenisSurat,
       keterangan,
     };
-    console.log(data);
+    try {
+      await axios.post("http://localhost:8000/surat", data);
+      swalButton
+        .fire({
+          title: "Permohonan Surat Berhasil Terkirim!",
+          text: "Silahkan menunggu konfirmasi persetujuan surat yang akan dikirim ke email anda",
+          icon: "success",
+          confirmButtonText: "Ok, Mengerti",
+          allowOutsideClick: false,
+        })
+        .then((result) => {
+          if (result.isConfirmed) {
+            navigate("/");
+          }
+        });
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi kesalahan, silahkan coba lagi",
+      });
+    }
+    setLoading(false);
   };
 
   return (
@@ -84,14 +115,17 @@ const Surat = () => {
                 {/* Keterangan */}
                 <h5>Keterangan</h5>
                 <textarea onChange={(e) => setKeterangan(e.target.value)} className="form-control my-4 p-3" rows="4" placeholder="Jawaban Anda" id="floatingTextarea"></textarea>
-                <button type="submit" className={`btn px-3 ${styles["btn-more"]}`}>
-                  Kirim
-                </button>
-                {/* <button data-bs-toggle="modal" data-bs-target="#staticBackdrop" className="btn btn-primary px-3">
-                  Kirim
-                </button> */}
+                {loading ? (
+                  <button disabled className={`btn px-3 ${styles["btn-more"]}`}>
+                    <span className="spinner-border spinner-border-sm" role="status" aria-hidden="true"></span>
+                    Mengirim ...
+                  </button>
+                ) : (
+                  <button type="submit" className={`btn px-3 ${styles["btn-more"]}`}>
+                    Kirim
+                  </button>
+                )}
               </form>
-              <Modal />
             </div>
           </div>
           <SideMap />

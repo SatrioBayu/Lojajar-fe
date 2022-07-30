@@ -5,6 +5,7 @@ import Sidebar from "../components/Sidebar";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useParams } from "react-router-dom";
+import Swal from "sweetalert2";
 
 const EditUmkm = () => {
   const { id } = useParams();
@@ -55,12 +56,27 @@ const EditUmkm = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      navigate("/listumkm");
+      Swal.fire({
+        icon: "success",
+        title: "Berita berhasil ditambahkan",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          navigate("/listumkm");
+        }
+      });
     } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi Kesalahan pada server",
+      });
       if (error.response.status == 422) {
         setError(error.response.data.errors[0].message);
       } else if (error.response.status === 400) {
         setError(error.response.data.message);
+      } else if (error.response.status === 500) {
+        setError("Isi deskripsi terlalu panjang. Maximum 1000 karakter");
       } else {
         setError("Terjadi kesalahan pada server");
       }

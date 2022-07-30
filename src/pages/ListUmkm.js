@@ -3,6 +3,7 @@ import AdminNavbar from "../components/AdminNavbar";
 import Sidebar from "../components/Sidebar";
 import { useState, useEffect } from "react";
 import axios from "axios";
+import Swal from "sweetalert2";
 
 const ListUmkm = () => {
   const [umkm, setUmkm] = useState([]);
@@ -29,9 +30,21 @@ const ListUmkm = () => {
           Authorization: `Bearer ${localStorage.getItem("token")}`,
         },
       });
-      window.location.reload();
+      Swal.fire({
+        icon: "success",
+        title: "UMKM berhasil dihapus",
+        confirmButtonColor: "#198754",
+      }).then((result) => {
+        if (result.isConfirmed) {
+          window.location.reload();
+        }
+      });
     } catch (error) {
-      setErrorDelete("Terjadi kesalahan pada server");
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: "Terjadi kesalahan, silahkan coba lagi",
+      });
     }
   };
 
@@ -44,11 +57,6 @@ const ListUmkm = () => {
           <div className="container">
             <h3>List UMKM</h3>
             <p>Anda dapat mengedit dan menghapus UMKM yang telah di post pada halaman Tambah UMKM</p>
-            {errorDelete && (
-              <div className="alert alert-danger" role="alert">
-                {errorDelete}
-              </div>
-            )}
             {error ? (
               <div className="alert alert-danger" role="alert">
                 {error}

@@ -8,7 +8,7 @@
 .offcanvas{
   width: 15rem !important;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
   .offcanvas{
     display: none !important;
   }

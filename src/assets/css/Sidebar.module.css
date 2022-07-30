@@ -15,7 +15,7 @@
 .dropdown:hover{
     background-color: #D8EAA8 !important;
 }
-@media (min-width: 768px) {
+@media (min-width: 992px) {
     .main{
         display: flex;
     }

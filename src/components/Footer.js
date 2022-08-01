@@ -1,5 +1,9 @@
 import LogoDesa from "../assets/images/Lambang_Bondowoso.png";
 import styles from "../assets/css/Footer.module.css";
+import IG from "../assets/images/IG.webp";
+import YT from "../assets/images/yt.png";
+import FB from "../assets/images/facebook.png";
+
 const Footer = () => {
   return (
     <footer className={`py-5 ${styles.bg}`}>
@@ -24,7 +28,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-sm-1 d-flex align-items-center">
                 <a href="#" className={`my-2 ${styles["footer-link"]}`}>
-                  <span className="fa-brands fa-facebook fa-lg"></span>
+                  <img src={FB} alt="youtube" />
                 </a>
               </div>
               <div className="col-sm-11">
@@ -36,7 +40,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-sm-1 d-flex align-items-center">
                 <a href="#" className={`my-2 ${styles["footer-link"]}`}>
-                  <span className="fa-brands fa-youtube fa-lg"></span>
+                  <img src={YT} alt="youtube" />
                 </a>
               </div>
               <div className="col-sm-11">
@@ -48,7 +52,7 @@ const Footer = () => {
             <div className="row">
               <div className="col-sm-1 d-flex align-items-center">
                 <a href="#" className={`my-2 ${styles["footer-link"]}`}>
-                  <span className="fa-brands fa-instagram fa-lg"></span>
+                  <img src={IG} alt="instagram" />
                 </a>
               </div>
               <div className="col-sm-11">

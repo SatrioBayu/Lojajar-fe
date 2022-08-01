@@ -64,7 +64,7 @@ const TambahUmkm = () => {
       });
       Swal.fire({
         icon: "success",
-        title: "Berita berhasil ditambahkan",
+        title: "UMKM berhasil ditambahkan",
         confirmButtonColor: "#198754",
       }).then((result) => {
         if (result.isConfirmed) {
@@ -104,7 +104,9 @@ const TambahUmkm = () => {
                 </div>
               )}
               <div className="mb-4">
-                <h5>Gambar UMKM</h5>
+                <h5>
+                  Gambar UMKM <span className="fs-6">(maks. 3 gambar)</span>
+                </h5>
                 <div className="row">
                   {imagePreview.map((image, index) => (
                     <div key={index} className="col-sm-4 d-flex justify-content-center">

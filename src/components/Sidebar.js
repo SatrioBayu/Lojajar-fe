@@ -21,7 +21,7 @@ const Sidebar = () => {
             <div className="dropdown">
               <CDBSidebarMenuItem icon="newspaper">
                 <p className={`dropdown-toggle ${styles.p}`} type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
-                  Artikel
+                  Berita
                 </p>
                 <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
                   <li>

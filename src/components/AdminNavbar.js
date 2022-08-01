@@ -9,7 +9,7 @@ const AdminNavbar = () => {
       <div className="container-fluid px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
         <a className="navbar-brand" href="/">
-          E-LOJAJAR
+          Desa Lojajar
         </a>
         <a className="navbar-toggler navbar-toggler-right" type="button" data-bs-toggle="offcanvas" href="#offcanvasExample" role="button" aria-controls="offcanvasExample">
           <span className="navbar-toggler-icon"></span>

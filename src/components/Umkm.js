@@ -33,8 +33,6 @@ const Umkm = (props) => {
           pagination={{ clickable: true }}
           navigation={true}
           modules={[Pagination, Navigation]}
-          loop={true}
-          loopFillGroupWithBlank={true}
           className="mySwiper"
         >
           {props.data.map((item) => (

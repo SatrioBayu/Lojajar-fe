@@ -19,6 +19,7 @@ const Login = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
+    localStorage.removeItem("token");
     const data = { username, password };
     try {
       const res = await axios.post("https://lojajar-be.herokuapp.com/login", data);

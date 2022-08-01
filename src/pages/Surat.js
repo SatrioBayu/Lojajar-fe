@@ -11,7 +11,9 @@ const Surat = () => {
   const [loading, setLoading] = useState(false);
   const [nama, setNama] = useState("");
   const [nik, setNik] = useState("");
-  const [email, setEmail] = useState("");
+  const [namaPemohon, setNamaPemohon] = useState("");
+  const [nikPemohon, setNikPemohon] = useState("");
+  const [noWa, setNoWa] = useState("");
   const [jenisSurat, setJenisSurat] = useState("");
   const [keterangan, setKeterangan] = useState(null);
   const navigate = useNavigate();
@@ -28,10 +30,13 @@ const Surat = () => {
     const data = {
       nama,
       nik,
-      email,
+      namaPemohon,
+      nikPemohon,
+      noWa,
       jenis: jenisSurat,
       keterangan,
     };
+    console.log(data);
     try {
       await axios.post("https://lojajar-be.herokuapp.com/surat", data);
       swalButton
@@ -66,7 +71,7 @@ const Surat = () => {
         <div className="row gx-5 gy-4 my-4">
           <div className="col-lg-8">
             <div className={`${styles["surat-container"]}`}>
-              <form onSubmit={handleSubmit} className="p-4">
+              <form id="form" onSubmit={handleSubmit} className="p-4">
                 {/* Nama */}
                 <div className="row">
                   <h5 className="mb-3">Nama</h5>
@@ -83,11 +88,27 @@ const Surat = () => {
                   </div>
                 </div>
 
+                {/* Nama */}
+                <div className="row">
+                  <h5 className="mb-3">Nama Pemohon</h5>
+                  <div className="col-md-6 d-flex">
+                    <input required onChange={(e) => setNamaPemohon(e.target.value)} type="text" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                  </div>
+                </div>
+
+                {/* NIK */}
+                <div className="row">
+                  <h5 className="mb-3">NIK Pemohon</h5>
+                  <div className="col-md-6 d-flex">
+                    <input required onChange={(e) => setNikPemohon(e.target.value)} type="text" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                  </div>
+                </div>
+
                 {/* Email */}
                 <div className="row">
-                  <h5 className="mb-3">Email</h5>
+                  <h5 className="mb-3">No Whatsapp</h5>
                   <div className="col-md-6 d-flex">
-                    <input required onChange={(e) => setEmail(e.target.value)} type="email" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
+                    <input required onChange={(e) => setNoWa(e.target.value)} type="text" placeholder="Jawaban Anda" className={`flex-fill pb-2 mb-4 ${styles["input-jawaban"]}`} />
                   </div>
                 </div>
 
@@ -95,21 +116,39 @@ const Surat = () => {
                 <h5 className="mb-3">Pilih Jenis Surat</h5>
                 <div className="form-check">
                   <input required onChange={(e) => setJenisSurat(e.target.value)} value="Surat Keterangan Usaha" className="form-check-input" type="radio" name="jenis-surat" />
-                  <label className={`form-check-label ${styles["input-radio"]}`} htmlFor="flexRadioDefault1">
-                    Surat Keterangan Usaha
-                  </label>
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Usaha</label>
                 </div>
                 <div className="form-check">
-                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Menikah" />
-                  <label className={`form-check-label ${styles["input-radio"]}`} htmlFor="flexRadioDefault2">
-                    Surat Keterangan Menikah
-                  </label>
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Umum" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Umum</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Satu Nama" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Satu Nama</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Domisili" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Domisili</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Pindah" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Pindah</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Kematian" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Kematian</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Ahli Waris" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Ahli Waris</label>
+                </div>
+                <div className="form-check">
+                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Pengantar SKCK" />
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Pengantar SKCK</label>
                 </div>
                 <div className="form-check mb-4">
                   <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Tidak Mampu" />
-                  <label className={`form-check-label ${styles["input-radio"]}`} htmlFor="flexRadioDefault2">
-                    Surat Keterangan Tidak Mampu
-                  </label>
+                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Tidak Mampu</label>
                 </div>
 
                 {/* Keterangan */}

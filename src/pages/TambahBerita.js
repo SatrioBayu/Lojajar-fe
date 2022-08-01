@@ -58,7 +58,7 @@ const TambahBerita = () => {
         title: "Oops...",
         text: "Terjadi Kesalahan pada server",
       });
-      if (error.response.status == 500) {
+      if (error.response.status === 500) {
         setError("Isi berita terlalu panjang. Maximum 1000 karakter");
       } else {
         setError("Terjadi kesalahan pada server");
@@ -102,7 +102,7 @@ const TambahBerita = () => {
                   </button>
                 ) : (
                   <button type="submit" className="me-3 btn btn-primary">
-                    Post Artikel
+                    Post Berita
                   </button>
                 )}
                 <button onClick={handleCancel} type="button" className="btn btn-danger">

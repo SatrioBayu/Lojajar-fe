@@ -25,9 +25,11 @@ const SideCard = (props) => {
           </div>
           <h5 className={`fw-bold ${styles["card-title"]}`}>{props.data.nama}</h5>
           <p className={`${styles["card-text"]} mb-3`}>{props.data.alamat}</p>
-          <h5 className={`fw-bold ${styles["card-title"]}`}>
-            <span className="fs-6 fw-normal">No Hp: </span> {props.data.noHp}
-          </h5>
+          <h6 className={`fw-bold ${styles["card-title"]}`}>
+            <a href={`tel:${props.data.noHp}`} className={`${styles["noHp"]}`}>
+              <i className="fa-solid fa-phone"></i>&nbsp; {props.data.noHp}
+            </a>
+          </h6>
           <a className={`${styles["card-link"]}`} href={`/umkm/${props.data.id}`}>
             Lihat Selengkapnya
           </a>

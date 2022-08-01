@@ -8,7 +8,7 @@ const Navbar = () => {
       <div className="container px-4 px-lg-5">
         <img src={LogoDesa} className={`${styles.desa} me-3`} alt="logo" />
         <a className="navbar-brand" href="/">
-          E-LOJAJAR
+          Desa Lojajar
         </a>
         <button
           className="navbar-toggler navbar-toggler-right"

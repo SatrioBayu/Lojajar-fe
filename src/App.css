@@ -1,3 +1,6 @@
+a{
+  text-decoration: none !important;
+}
 .swiper-pagination{
     margin-top: 2rem;
     position: relative !important;

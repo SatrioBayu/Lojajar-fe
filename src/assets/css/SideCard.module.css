@@ -1,55 +1,57 @@
 .card-icon {
-    width: 1.2rem;
-    height: 1.2rem;
+  width: 1.2rem;
+  height: 1.2rem;
 }
 
 .badge {
-    border: 0px !important;
+  border: 0px !important;
 }
 
 .card-tag--makanan {
-    border-radius: 3rem;
-    background-color: #5EAD2B;
-    font-family: "Open Sans", sans-serif;
+  border-radius: 3rem;
+  background-color: #5ead2b;
+  font-family: "Open Sans", sans-serif;
 }
-.card-tag--barang{
-    border-radius: 3rem;
-    background-color: #1C8FB9;
-    font-family: "Open Sans", sans-serif;
+.card-tag--barang {
+  border-radius: 3rem;
+  background-color: #1c8fb9;
+  font-family: "Open Sans", sans-serif;
 }
-.card-tag--jasa{
-    border-radius: 3rem;
-    background-color: #FFC400;
-    font-family: "Open Sans", sans-serif;
+.card-tag--jasa {
+  border-radius: 3rem;
+  background-color: #ffc400;
+  font-family: "Open Sans", sans-serif;
 }
 
 .content p {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .btn-more {
-    background: #1C8FB9;
-    border-radius: 8px;
-    padding: 1rem;
-    color: #fff;
+  background: #1c8fb9;
+  border-radius: 8px;
+  padding: 1rem;
+  color: #fff;
 }
-.card-img{
-    height: 10rem !important;
-    object-fit: cover;
+.card-img {
+  height: 10rem !important;
+  object-fit: cover;
 }
 .card-title {
-    font-weight: 400;
-    font-family: Open Sans, sans-serif;
-    font-size: 1rem;
+  font-weight: 400;
+  font-family: Open Sans, sans-serif;
+  font-size: 1rem;
 }
-
 .card-text {
-    color: #5D646D;
-    font-size: 0.8rem;
-    font-family: Open Sans, sans-serif;
+  color: #5d646d;
+  font-size: 0.8rem;
+  font-family: Open Sans, sans-serif;
 }
-
+.noHp{
+    text-decoration: none !important;
+    color: #1c8fb9;
+}
 .card-link {
-    color: #1C8FB9;
-    font-family: Open Sans, sans-serif;
+  color: #1c8fb9;
+  font-family: Open Sans, sans-serif;
 }

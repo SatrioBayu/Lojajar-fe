@@ -58,7 +58,7 @@ const EditUmkm = () => {
       });
       Swal.fire({
         icon: "success",
-        title: "Berita berhasil ditambahkan",
+        title: "UMKM berhasil ditambahkan",
         confirmButtonColor: "#198754",
       }).then((result) => {
         if (result.isConfirmed) {

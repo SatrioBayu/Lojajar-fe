@@ -75,9 +75,9 @@ const ListSurat = () => {
                     <thead>
                       <tr className="text-center">
                         <th scope="col">No</th>
-                        <th scope="col">Pemohon</th>
+                        <th scope="col">Nama</th>
                         <th scope="col">NIK</th>
-                        <th scope="col">Email</th>
+                        <th scope="col">No Wa</th>
                         <th scope="col">Jenis</th>
                         <th scope="col">Keterangan</th>
                         <th scope="col">Status</th>
@@ -102,7 +102,7 @@ const ListSurat = () => {
                                   <td scope="row">{index + 1}</td>
                                   <td>{item.nama}</td>
                                   <td>{item.nik}</td>
-                                  <td>{item.email}</td>
+                                  <td>{item.noWa}</td>
                                   <td>{item.jenis}</td>
                                   <td>{item.keterangan}</td>
                                   <td>{item.status}</td>

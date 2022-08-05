@@ -27,6 +27,10 @@
   margin-bottom: 0;
 }
 
+.hover:hover{
+  box-shadow: 0px 0px 10px 5px #D9D9D9;
+}
+
 .btn-more {
   background: #1c8fb9;
   border-radius: 8px;
@@ -47,9 +51,9 @@
   font-size: 0.8rem;
   font-family: Open Sans, sans-serif;
 }
-.noHp{
-    text-decoration: none !important;
-    color: #1c8fb9;
+.noHp {
+  text-decoration: none !important;
+  color: #1c8fb9;
 }
 .card-link {
   color: #1c8fb9;

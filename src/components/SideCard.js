@@ -5,7 +5,7 @@ import WA from "../assets/images/wa.png";
 const SideCard = (props) => {
   return (
     <div className="col">
-      <div className="card h-100">
+      <div className={`card h-100 ${styles["hover"]}`}>
         <img src={props.data.UmkmImages[0].image} className={`card-img-top ${styles["card-img"]}`} alt="..." />
         <div className="card-body">
           <div className="row">

@@ -22,7 +22,7 @@ const Services = () => {
                 <i className="fa-solid fa-house fa-3x"></i>
               </div>
               <h3 className="h4 mb-2">RW</h3>
-              <p className="text-muted mb-0">17</p>
+              <p className="text-muted mb-0">7</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 text-center">
@@ -31,7 +31,7 @@ const Services = () => {
                 <i className="fa-solid fa-house fa-3x"></i>
               </div>
               <h3 className="h4 mb-2">RT</h3>
-              <p className="text-muted mb-0">53</p>
+              <p className="text-muted mb-0">14</p>
             </div>
           </div>
           <div className="col-lg-3 col-md-6 text-center">
@@ -40,7 +40,7 @@ const Services = () => {
                 <i className="fa-solid fa-person fa-3x"></i>
               </div>
               <h3 className="h4 mb-2">Penduduk</h3>
-              <p className="text-muted mb-0">53</p>
+              <p className="text-muted mb-0">2769</p>
             </div>
           </div>
         </div>

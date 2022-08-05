@@ -12,7 +12,7 @@ const Article = (props) => {
         <div className="row justify-content-center row-cols-1 row-cols-sm-2 row-cols-md-3 gx-4">
           {props.data.map((item) => (
             <div className="col" key={item.id}>
-              <div className="card h-100">
+              <div className={`card h-100 ${styles["hover"]}`}>
                 <img src={item.ArticleImages[0].image} className={styles["card-img"]} alt="..." />
                 <div className="card-body">
                   <div className="row">

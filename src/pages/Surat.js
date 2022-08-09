@@ -131,10 +131,6 @@ const Surat = () => {
                   <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Domisili</label>
                 </div>
                 <div className="form-check">
-                  <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Keterangan Pindah" />
-                  <label className={`form-check-label ${styles["input-radio"]}`}>Surat Keterangan Pindah</label>
-                </div>
-                <div className="form-check">
                   <input required onChange={(e) => setJenisSurat(e.target.value)} className="form-check-input" type="radio" name="jenis-surat" value="Surat Kematian" />
                   <label className={`form-check-label ${styles["input-radio"]}`}>Surat Kematian</label>
                 </div>

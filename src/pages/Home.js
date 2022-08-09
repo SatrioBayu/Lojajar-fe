@@ -43,7 +43,6 @@ const Home = () => {
     <div id="page-top">
       <Navbar />
       <Jumbotron />
-      <About />
       <Services />
       <Portfolio />
       <Gmaps />

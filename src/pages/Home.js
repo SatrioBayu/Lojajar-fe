@@ -1,7 +1,7 @@
 import { useEffect } from "react";
 import Navbar from "../components/Navbar";
 import Jumbotron from "../components/Jumbotron";
-import About from "../components/About";
+// import About from "../components/About";
 import Services from "../components/Services";
 import Portfolio from "../components/Portfolio";
 import Gmaps from "../components/Gmaps";

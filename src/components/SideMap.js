@@ -21,36 +21,36 @@ const SideMap = () => {
         <p>Apabila ada pertanyaan lebih lanjut silahkan hubungi kami melalui :</p>
         <div className="row">
           <div className="col-sm-1 d-flex align-items-center">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://web.facebook.com/pemerintah.desalojajar" className={`my-2 ${styles["footer-link"]}`}>
               <img src={FB} alt="youtube" />
             </a>
           </div>
           <div className="col-sm-11">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://web.facebook.com/pemerintah.desalojajar" className={`my-2 ${styles["footer-link"]}`}>
               Facebook
             </a>
           </div>
         </div>
         <div className="row">
           <div className="col-sm-1 d-flex align-items-center">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://www.youtube.com/channel/UCDnTMDDWmTTmo_P28aR63_Q" className={`my-2 ${styles["footer-link"]}`}>
               <img src={YT} alt="youtube" />
             </a>
           </div>
           <div className="col-sm-11">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://www.youtube.com/channel/UCDnTMDDWmTTmo_P28aR63_Q" className={`my-2 ${styles["footer-link"]}`}>
               Youtube
             </a>
           </div>
         </div>
         <div className="row">
           <div className="col-sm-1 d-flex align-items-center">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://www.instagram.com/kkn348lojajar/" className={`my-2 ${styles["footer-link"]}`}>
               <img src={IG} alt="instagram" />
             </a>
           </div>
           <div className="col-sm-11">
-            <a href="#" className={`my-2 ${styles["footer-link"]}`}>
+            <a target="_blank" href="https://www.instagram.com/kkn348lojajar/" className={`my-2 ${styles["footer-link"]}`}>
               Instagram
             </a>
           </div>

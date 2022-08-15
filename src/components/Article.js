@@ -1,6 +1,7 @@
 import styles from "../assets/css/Article.module.css";
 import FB from "../assets/images/fb.png";
 import WA from "../assets/images/wa.png";
+import { NavLink } from "react-router-dom";
 
 const Article = (props) => {
   return (
@@ -20,10 +21,10 @@ const Article = (props) => {
                       <p>{item.User.username}</p>
                     </div>
                     <div className="d-flex justify-content-end col-6">
-                      <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/berita/${item.id}`} target="_blank">
+                      <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdesalojajarbondowoso.com/berita/${item.id}`} target="_blank">
                         <img src={FB} className="me-3" alt="fb" />
                       </a>
-                      <a href={`https://api.whatsapp.com/send/?phone&text=${item.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/berita/${item.id}`} target="_blank">
+                      <a href={`https://api.whatsapp.com/send/?phone&text=${item.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Fdesalojajarbondowoso.com/berita/${item.id}`} target="_blank">
                         <img src={WA} alt="wa" />
                       </a>
                     </div>

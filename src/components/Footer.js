@@ -11,7 +11,7 @@ const Footer = () => {
         <div className="row justify-content-center g-4">
           <div className="col-sm-8">
             <img src={LogoDesa} className={`mb-3 ${styles.desa}`} alt="Logo" />
-            <p>Desa Duren, Kasar, Ganyuwangi Jawa Selatan, Indonesia</p>
+            <p>Desa Lojajar, Kecamatan Tenggarang, Kabupaten Bondowoso, Jawa Timur, Indonesia</p>
             <div className="d-flex flex-wrap">
               <p className="me-5">&copy; 2022 Desa Duren. All Rights Reserved</p>
               <ul>

@@ -27,11 +27,11 @@ const HorizontalCard = (props) => {
                   <p className={styles.date}>Bagikan:</p>
                 </div>
                 <div className="col-sm-3">
-                  <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/berita/${props.data.id}`} target="_blank">
+                  <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdesalojajarbondowoso.com/berita/${props.data.id}`} target="_blank">
                     <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
                   </a>
                   <a
-                    href={`https://api.whatsapp.com/send/?phone&text=${props.data.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/berita/${props.data.id}`}
+                    href={`https://api.whatsapp.com/send/?phone&text=${props.data.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Fdesalojajarbondowoso.com/berita/${props.data.id}`}
                     target="_blank"
                   >
                     <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />

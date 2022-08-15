@@ -72,10 +72,10 @@ const DetailUmkm = () => {
                 {umkm.jenis === "Barang" && <p className={`badge ${styles["card-tag--barang"]}`}>{umkm.jenis}</p>}
                 {umkm.jenis === "Jasa" && <p className={`badge ${styles["card-tag--jasa"]}`}>{umkm.jenis}</p>}
                 <p className={`badge me-auto ${styles["card-tag"]}`}>{umkm.jenis}</p>
-                <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/umkm/${umkm.id}`} target="_blank">
+                <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdesalojajarbondowoso.com/umkm/${umkm.id}`} target="_blank">
                   <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
                 </a>
-                <a href={`https://api.whatsapp.com/send/?phone&text=${umkm.nama}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/umkm/${umkm.id}`} target="_blank">
+                <a href={`https://api.whatsapp.com/send/?phone&text=${umkm.nama}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Fdesalojajarbondowoso.com/umkm/${umkm.id}`} target="_blank">
                   <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
                 </a>
                 <a onClick={copyLink} className={`badge ${styles["copy-link"]}`}>

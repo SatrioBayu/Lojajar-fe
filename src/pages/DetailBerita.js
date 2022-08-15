@@ -63,10 +63,13 @@ const DetailBerita = () => {
                   <p className={`mt-1 mb-3`}>Penulis : {article.User.username}</p>
                 </div>
                 <div className="col-sm-6 d-flex justify-content-end">
-                  <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Flojajar.vercel.app/berita/${article.id}`} target="_blank">
+                  <a href={`https://www.facebook.com/sharer.php?u=https%3A%2F%2Fdesalojajarbondowoso.com/berita/${article.id}`} target="_blank">
                     <img src={FB} className={`me-3 ${styles.share}`} alt="fb" />
                   </a>
-                  <a href={`https://api.whatsapp.com/send/?phone&text=${article.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Flojajar.vercel.app/berita/${article.id}`} target="_blank">
+                  <a
+                    href={`https://api.whatsapp.com/send/?phone&text=${article.judul}%0A%0AKlik+untuk+baca+selengkapnya+:+https%3A%2F%2Fdesalojajarbondowoso.com/berita/${article.id}`}
+                    target="_blank"
+                  >
                     <img src={WA} className={`me-3 ${styles.share}`} alt="wa" />
                   </a>
                   <a onClick={copyLink} className={`badge ${styles["card-tag"]}`}>

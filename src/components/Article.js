@@ -1,7 +1,7 @@
 import styles from "../assets/css/Article.module.css";
 import FB from "../assets/images/fb.png";
 import WA from "../assets/images/wa.png";
-import { NavLink } from "react-router-dom";
+// import { NavLink } from "react-router-dom";
 
 const Article = (props) => {
   return (

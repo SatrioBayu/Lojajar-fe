@@ -1,5 +1,5 @@
 import AirTerjunBusa from "../assets/images/bondowoso/AirTerjunBusa.jpg";
-import BetohSoon from "../assets/images/bondowoso/BetohSoon.jpg";
+import KawahWurung from "../assets/images/bondowoso/kawahurung.jpg";
 import Blawan from "../assets/images/bondowoso/Blawan.jpg";
 
 const Portfolio = () => {
@@ -16,10 +16,10 @@ const Portfolio = () => {
             </a>
           </div>
           <div className="col-lg-4 col-sm-6">
-            <a className="portfolio-box" href={BetohSoon} title="Betah Soon">
-              <img className="img-fluid" src={BetohSoon} alt="images" />
+            <a className="portfolio-box" href={KawahWurung} title="Betah Soon">
+              <img className="img-fluid" src={KawahWurung} alt="images" />
               <div className="portfolio-box-caption">
-                <div className="project-name">Betah Soon</div>
+                <div className="project-name">Kawah Wurung</div>
               </div>
             </a>
           </div>

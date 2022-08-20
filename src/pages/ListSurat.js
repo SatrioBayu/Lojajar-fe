@@ -70,11 +70,13 @@ const ListSurat = () => {
                 <div className={`${styles.coba}`}>
                   <h6>List Surat Permohonan</h6>
                 </div>
-                <div className="p-3 table-responsive-lg">
+                <div className="p-3 table-responsive-xxl">
                   <table className="table table-sm align-middle table-bordered">
                     <thead>
                       <tr className="text-center">
                         <th scope="col">No</th>
+                        <th scope="col">Nama Pemohon</th>
+                        <th scope="col">NIK Pemohon</th>
                         <th scope="col">Nama</th>
                         <th scope="col">NIK</th>
                         <th scope="col">No Wa</th>
@@ -87,7 +89,7 @@ const ListSurat = () => {
                     <tbody>
                       {loading ? (
                         <tr>
-                          <td colSpan="8" className="text-center p-3">
+                          <td colSpan="10" className="text-center p-3">
                             <div className="spinner-border" role="status">
                               <span className="sr-only">Loading...</span>
                             </div>
@@ -102,6 +104,8 @@ const ListSurat = () => {
                                   <td scope="row">{index + 1}</td>
                                   <td>{item.nama}</td>
                                   <td>{item.nik}</td>
+                                  <td>{item.namaPemohon}</td>
+                                  <td>{item.nikPemohon}</td>
                                   <td>{item.noWa}</td>
                                   <td>{item.jenis}</td>
                                   <td>{item.keterangan}</td>
